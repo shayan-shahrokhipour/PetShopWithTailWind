@@ -20,13 +20,53 @@
         --font-display: "yekan";
         --color-brand: #95d5b2;
         --color-text-border: #d1d5db;
+        --animate-slider-first:first 9s  infinite;
+        --animate-slider-second:second 9s  infinite;
       }
+
+      @keyframes first{
+        0%,33%{
+         opacity: 1;
+        }33%,66%{
+          opacity: 0;
+        }66%,100%{
+          opacity: 1;
+        }
+      }
+
+      @keyframes second{
+        0%,33%{
+          opacity: 0;
+        }33%,66%{
+          opacity: 1;
+        }66%,100%{
+          opacity: 0;
+        }
+      }
+      
+      @layer components{
+        .sliders{
+           @apply md:w-[98%] md:h-[400px] w-[90%] h-[250px] m-[10px_auto] rounded-[10px]
+        }
+        .overlay{
+          @apply z-[200] fixed top-[140px] w-full h-[calc(100vh-140px)] bg-black/25  hidden transition backdrop-blur-[5px] group-has-[.links:hover]:md:block
+        }
+        .linkAnchor{
+         @apply text-[14px] px-[10px] after:bg-brand transition duration-200 hover:text-brand relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:right-0 after:bottom-[-3px] hover:after:w-full after:transition-all after:duration-300 after:z-[300]
+        }
+
+        .megaMenu{
+          @apply hidden z-200 w-full h-auto bg-white absolute right-0 top-[26px] justify-around  rounded-[0_0_5px_5px] 
+        }
+        
+      }
+     
     </style>
     <title>Document</title>
   </head>
-  <body class="font-display">
+  <body class="font-display group">
     <header
-      class="md:w-[100%] h-[200px] md:h-auto flex justify-around items-start md:items-center flex-wrap"
+      class="z-[300] md:w-[100%] h-[200px] md:h-auto flex justify-around items-start md:items-center flex-wrap"
     >
       <div
         class="md:w-[15%] flex items-center px-[55px] md:px-[40px] order-1 md:order-1"
@@ -61,8 +101,8 @@
         <i class="fas fa-shopping-cart"></i>
       </div>
     </header>
-    <div class="group">
-      <nav class="w-[100%] max-md:overflow-x-auto scrollbar-none relative">
+  
+      <nav class="z-[300] w-[100%] max-md:overflow-x-auto scrollbar-none relative">
         <ul
           class="md:max-w-[60%] flex md:px-[40px] gap-[25px] md:gap-[12px] w-max"
         >
@@ -73,13 +113,86 @@
               alt="paw"
             /><a
               href="#"
-              class="text-[14px] px-[10px] after:bg-brand transition duration-200 hover:text-brand relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:right-0 after:bottom-[-3px] hover:after:w-full after:transition-ease after:duration-300"
+              class="linkAnchor"  
               >گربه</a
             >
             <div
-              class="hidden z-200 w-full h-[300px] bg-[aqua] absolute right-0 top-[30px] group-hover/cat:block"
+              class=" group-hover/cat:md:flex megaMenu"
             >
-              <h1 class="text-white">test</h1>
+            <div>
+                <h1 class="text-black">غذای گربه</h1>
+                <ul>
+  <li><p><a href="#" class="text-[14px]">غذای خشک گربه بالغ</a></p></li>
+  <li><p><a href="#" class="text-[14px]">غذای خشک بچه گربه</a></p></li>
+  <li><p><a href="#" class="text-[14px]">غذای خشک گربه عقیم شده</a></p></li>
+  <li><p><a href="#" class="text-[14px]">غذای خشک گربه مسن</a></p></li>
+  <li><p><a href="#" class="text-[14px]">غذای خشک فله</a></p></li>
+</ul>
+
+            </div>
+            <div>
+              <h1>درمانی گربه</h1>
+             <ul>
+  <li><p><a href="#" class="text-[14px]">آرامبخش</a></p></li>
+  <li><p><a href="#" class="text-[14px]">استخوان و مفاصل</a></p></li>
+  <li><p><a href="#" class="text-[14px]">پوست و مو</a></p></li>
+  <li><p><a href="#" class="text-[14px]">چاقی</a></p></li>
+  <li><p><a href="#" class="text-[14px]">حساسیت</a></p></li>
+  <li><p><a href="#" class="text-[14px]">دستگاه گوارش</a></p></li>
+  <li><p><a href="#" class="text-[14px]">دهان و دندان</a></p></li>
+  <li><p><a href="#" class="text-[14px]">دیابت</a></p></li>
+  <li><p><a href="#" class="text-[14px]">ریکاوری</a></p></li>
+  <li><p><a href="#" class="text-[14px]">قلب</a></p></li>
+  <li><p><a href="#" class="text-[14px]">کبد</a></p></li>
+  <li><p><a href="#" class="text-[14px]">کلیه</a></p></li>
+  <li><p><a href="#" class="text-[14px]">مثانه</a></p></li>
+</ul>
+            </div>
+            <div>
+              <h1>سوپ و کنسرو گربه</h1>
+              <ul>
+  <li><p><a href="#" class="text-[14px]">پوچ گربه</a></p></li>
+  <li><p><a href="#" class="text-[14px]">کنسرو گربه</a></p></li>
+  <li><p><a href="#" class="text-[14px]">ووم گربه</a></p></li>
+  <li><p><a href="#" class="text-[14px]">پودینگ</a></p></li>
+</ul>
+            </div>
+            <div>
+              <h1>تشویقی و مکمل</h1>
+              <ul>
+  <li><p><a href="#" class="text-[14px]">اسنک تشویقی</a></p></li>
+  <li><p><a href="#" class="text-[14px]">شیر خشک</a></p></li>
+  <li><p><a href="#" class="text-[14px]">مالت گربه</a></p></li>
+  <li><p><a href="#" class="text-[14px]">مولتی ویتامین</a></p></li>
+  <li><p><a href="#" class="text-[14px]">بستنی</a></p></li>
+</ul>
+            </div>
+            <div>
+              <h1>ملزومات نگهداری</h1>
+              <ul>
+  <li><p><a href="#" class="text-[14px]">آب خوری اتوماتیک</a></p></li>
+  <li><p><a href="#" class="text-[14px]">اسباب بازی</a></p></li>
+  <li><p><a href="#" class="text-[14px]">اسکرچر</a></p></li>
+  <li><p><a href="#" class="text-[14px]">ظرف آب و غذا</a></p></li>
+  <li><p><a href="#" class="text-[14px]">قلاده</a></p></li>
+  <li><p><a href="#" class="text-[14px]">ملزومات حمل و نقل</a></p></li>
+  <li><p><a href="#" class="text-[14px]">تشک و جای خواب گریه</a></p></li>
+  <li><p><a href="#" class="text-[14px]">خاک و ملزومات</a></p></li>
+</ul>
+            </div>
+            <div>
+              <h1>بهداشت و نظافت گربه </h1>
+              <ul>
+  <li><p><a href="#" class="text-[14px]">برس شانه و گره باز کن</a></p></li>
+  <li><p><a href="#" class="text-[14px]">پرز گیر و دستمال مرطوب</a></p></li>
+  <li><p><a href="#" class="text-[14px]">پد و زیر انداز</a></p></li>
+  <li><p><a href="#" class="text-[14px]">دهان و دندان</a></p></li>
+  <li><p><a href="#" class="text-[14px]">شامپو و لوسیون</a></p></li>
+  <li><p><a href="#" class="text-[14px]">ناخنگیر و سوهان</a></p></li>
+  <li><p><a href="#" class="text-[14px]">مراقبت از چشم و گوش</a></p></li>
+  <li><p><a href="#" class="text-[14px]">اسپری ضد عفونی کننده</a></p></li>
+</ul>
+            </div>
             </div>
           </li>
           <li class="group/dog links flex gap-[5px]">
@@ -89,13 +202,88 @@
               alt="dog"
             /><a
               href="#"
-              class="links text-[14px] px-[10px] hover:text-brand transition duration-200 after:bg-brand transition duration-200 hover:text-brand relative after:content-[''] after:absolute after:w-0 after:bg-color after:h-[2px] after:right-0 after:bottom-[-3px] hover:after:w-full after:transition-ease after:duration-300"
+              class="linkAnchor"
               >سگ</a
             >
             <div
-              class="z-200 absolute right-0 top-[30px] hidden w-full h-[300px] bg-[aqua] group-hover/dog:block"
+              class="group-hover/dog:flex megaMenu"
             >
-              <h1 class="text-white">test2</h1>
+            <div>
+                <h1 class="text-black">غذای سگ</h1>
+               <ul>
+  <li><a href="#" class="text-[14px]">غذای خشک سگ بالغ</a></li>
+  <li><a href="#" class="text-[14px]">غذای خشک توله سگ</a></li>
+  <li><a href="#" class="text-[14px]">غذای خشک سگ عقیم شده</a></li>
+  <li><a href="#" class="text-[14px]">غذای خشک سگ مسن</a></li>
+  <li><a href="#" class="text-[14px]">غذای خشک فله</a></li>
+</ul>
+
+            </div>
+            <div>
+              <h1>درمانی سگ</h1>
+              <ul>
+  <li><a href="#" class="text-[14px]">آرامبخش</a></li>
+  <li><a href="#" class="text-[14px]">استخوان و مفاصل</a></li>
+  <li><a href="#" class="text-[14px]">پوست و مو</a></li>
+  <li><a href="#" class="text-[14px]">چاقی</a></li>
+  <li><a href="#" class="text-[14px]">حساسیت</a></li>
+  <li><a href="#" class="text-[14px]">دستگاه گوارش</a></li>
+  <li><a href="#" class="text-[14px]">دهان و دندان</a></li>
+  <li><a href="#" class="text-[14px]">دیابت</a></li>
+  <li><a href="#" class="text-[14px]">ریکاوری</a></li>
+  <li><a href="#" class="text-[14px]">قلب</a></li>
+  <li><a href="#" class="text-[14px]">کبد</a></li>
+  <li><a href="#" class="text-[14px]">کلیه</a></li>
+  <li><a href="#" class="text-[14px]">مثانه</a></li>
+</ul>
+            </div>
+              <div>
+              <h1>سوپ و کنسرو سگ</h1>
+              <ul>
+  <li><a href="#" class="text-[14px]">پوچ سگ</a></li>
+  <li><a href="#" class="text-[14px]">کنسرو سگ</a></li>
+  <li><a href="#" class="text-[14px]">ووم سگ</a></li>
+  <li><a href="#" class="text-[14px]">پودینگ</a></li>
+</ul>
+            </div>
+            <div>
+              <h1>تشویقی و مکمل</h1>
+              <ul>
+  <li><a href="#" class="text-[14px]">اسنک تشویقی</a></li>
+  <li><a href="#" class="text-[14px]">شیر خشک</a></li>
+  <li><a href="#" class="text-[14px]">مالت سگ</a></li>
+  <li><a href="#" class="text-[14px]">مولتی ویتامین</a></li>
+  <li><a href="#" class="text-[14px]">بستنی</a></li>
+</ul>
+            </div>
+            <div>
+              <h1>ملزومات نگهداری</h1>
+              <ul>
+  <li><a href="#" class="text-[14px]">آب خوری اتوماتیک</a></li>
+  <li><a href="#" class="text-[14px]">اسباب بازی</a></li>
+  <li><a href="#" class="text-[14px]">اسکرچر</a></li>
+  <li><a href="#" class="text-[14px]">ظرف آب و غذا</a></li>
+  <li><a href="#" class="text-[14px]">قلاده</a></li>
+  <li><a href="#" class="text-[14px]">ملزومات حمل و نقل</a></li>
+  <li><a href="#" class="text-[14px]">تشک و جای خواب سگ</a></li>
+  <li><a href="#" class="text-[14px]">خاک و ملزومات</a></li>
+</ul>
+            </div>
+            <div>
+              <h1>بهداشت و نظافت سگ </h1>
+              <ul>
+                 <li><a href="#" class="text-[14px]">برس شانه و گره باز کن</a></li>
+                  <li><a href="#" class="text-[14px]">پرز گیر و دستمال مرطوب</a></li>
+                  <li><a href="#" class="text-[14px]">پد و زیر انداز</a></li>
+                  <li><a href="#" class="text-[14px]">دهان و دندان </a></li>
+                  <li><a href="#" class="text-[14px]">شامپو و لوسیون</a></li>
+                  <li><a href="#" class="text-[14px]">ناخنگیر و سوهان</a></li>
+                  <li><a href="#" class="text-[14px]">مراقبت از چشم و گوش</a></li>
+                  <li><a href="#" class="text-[14px]">اسپری ضد عفونی کننده</a></li>
+               
+              </ul>
+            </div>
+              
             </div>
           </li>
           <li class="group/rodents links flex gap-[5px]">
@@ -105,13 +293,13 @@
               alt="rabbit"
             /><a
               href="#"
-              class="links text-[14px] px-[10px] hover:text-brand transition duration-200 after:bg-brand transition duration-200 hover:text-brand relative after:content-[''] after:absolute after:w-0 after:bg-color after:h-[2px] after:right-0 after:bottom-[-3px] hover:after:w-full after:transition-ease after:duration-300"
+              class="linkAnchor"
               >جوندگان</a
             >
             <div
-              class="z-200  absolute right-0 top-[30px] hidden w-full h-[300px] bg-[aqua] group-hover/rodents:block"
+              class="z-200  absolute right-0 top-[26px] hidden w-full h-auto bg-white group-hover/rodents:flex justify-center"
             >
-              <h1 class="text-white">test3</h1>
+              <h1 class="text-black">جوندگان</h1>
             </div>
           </li>
           <li class="group/bird links flex gap-[5px]">
@@ -121,13 +309,13 @@
               alt="parrot"
             /><a
               href="#"
-              class="text-[14px] px-[10px] hover:text-brand transition duration-200 after:bg-brand transition duration-200 hover:text-brand relative after:content-[''] after:absolute after:w-0 after:bg-color after:h-[2px] after:right-0 after:bottom-[-3px] hover:after:w-full after:transition-ease after:duration-300"
+              class="linkAnchor"
               >پرندگان</a
             >
             <div
-              class="z-200  absolute right-0 top-[30px] hidden w-full h-[300px] bg-[aqua] group-hover/bird:block"
+              class="z-200 absolute right-0 top-[26px] hidden w-full h-auto bg-white group-hover/bird:flex justify-center"
             >
-              <h1 class="text-white">test4</h1>
+              <h1 class="text-black">پرندگان</h1>
             </div>
           </li>
           <li class="group/oceanic links flex gap-[5px]">
@@ -137,13 +325,13 @@
               alt="sealife"
             /><a
               href="#"
-              class="text-[14px] px-[10px] hover:text-brand transition duration-200 after:bg-brand transition duration-200 hover:text-brand relative after:content-[''] after:absolute after:w-0 after:bg-color after:h-[2px] after:right-0 after:bottom-[-3px] hover:after:w-full after:transition-ease after:duration-300"
+              class="linkAnchor"
               >آبزیان</a
             >
             <div
-              class="z-200  absolute right-0 top-[30px] hidden w-full h-[300px] bg-[aqua] group-hover/oceanic:block"
+              class="z-200  absolute right-0 top-[26px] hidden w-full h-auto bg-white group-hover/oceanic:flex justify-center"
             >
-              <h1 class="text-white">test5</h1>
+              <h1 class="text-black">آبزیان</h1>
             </div>
           </li>
           <li class="group/brand links flex gap-[5px] whitespace-nowrap">
@@ -153,13 +341,13 @@
               alt="brands"
             /><a
               href="#"
-              class="text-[14px] px-[10px] hover:text-brand after:bg-brand transition duration-200 hover:text-brand relative after:content-[''] after:absolute after:w-0 after:bg-color after:h-[2px] after:right-0 after:bottom-[-3px] hover:after:w-full after:transition-ease after:duration-300"
+              class="linkAnchor"
               >برند ها</a
             >
             <div
-              class="z-200  absolute right-0 top-[30px] hidden w-full h-[300px] bg-[aqua] group-hover/brand:block"
+              class="z-200  absolute right-0 top-[26px] hidden w-full h-auto bg-white group-hover/brand:flex justify-center"
             >
-              <h1 class="text-white">test6</h1>
+              <h1 class="text-black">برند ها</h1>
             </div>
           </li>
           <li class="group/bestseller links flex gap-[5px] whitespace-nowrap">
@@ -169,13 +357,13 @@
               alt="hotsale"
             /><a
               href="#"
-              class="text-[14px] px-[10px] hover:text-brand transition duration-200 after:bg-brand transition duration-200 hover:text-brand relative after:content-[''] after:absolute after:w-0 after:bg-color after:h-[2px] after:right-0 after:bottom-[-3px] hover:after:w-full after:transition-ease after:duration-300"
+              class="linkAnchor"
               >فروش ویژه</a
             >
             <div
-              class="z-200  absolute right-0 top-[30px] hidden w-full h-[300px] bg-[aqua] group-hover/bestseller:block"
+              class="z-200  absolute right-0 top-[26px] hidden w-full h-auto bg-white group-hover/bestseller:flex justify-center"
             >
-              <h1 class="text-white">test7</h1>
+              <h1 class="text-black">فروش ویژه</h1>
             </div>
           </li>
           <li class="links group/magazine flex gap-[5px]">
@@ -185,13 +373,13 @@
               alt="magazine"
             /><a
               href="#"
-              class="text-[14px] px-[10px] transition duration-200 hover:text-brand transition duration-200 after:bg-brand transition duration-200 hover:text-brand relative after:content-[''] after:absolute after:w-0 after:bg-color after:h-[2px] after:right-0 after:bottom-[-3px] hover:after:w-full after:transition-ease after:duration-300"
+              class="linkAnchor"
               >مقالات</a
             >
             <div
-              class="z-200  absolute right-0 top-[30px] hidden w-full h-[300px] bg-[aqua] group-hover/magazine:block"
+              class="z-200  absolute right-0 top-[26px] hidden w-full h-auto bg-white group-hover/magazine:flex justify-center"
             >
-              <h1 class="text-white">test8</h1>
+              <h1 class="text-black">مقالات</h1>
             </div>
           </li>
           <li class="links group/poshtibani flex gap-[5px]">
@@ -201,21 +389,28 @@
               alt="customer"
             /><a
               href="#"
-              class="text-[14px] px-[10px] hover:text-brand transition duration-200 after:bg-brand transition duration-200 hover:text-brand relative after:content-[''] after:absolute after:w-0 after:bg-color after:h-[2px] after:right-0 after:bottom-[-3px] hover:after:w-full after:transition-ease after:duration-300"
+              class="linkAnchor"
               >پشتیبانی</a
             >
             <div
-              class="z-200  absolute right-0 top-[30px] hidden w-full h-[300px] bg-[aqua] group-hover/poshtibani:block"
+              class="z-200  absolute md:right-[20%] left-0 top-[26px] hidden w-[15%] h-auto bg-white group-hover/poshtibani:block m-[0_auto] rounded-[0_0_5px_5px] after:z-300"
             >
-              <h1 class="text-white">test9</h1>
+              <h1 class="text-black">پشتیبانی</h1>
+              <ul class="flex flex-col justify-around">
+                <li><a href="#" class="text-[14px]">پیگیری سفارشات </a></li>
+                <li><a href="#" class="text-[14px]">رویه ارسال سفارش</a></li>
+                <li><a href="#" class="text-[14px]">شرایط و قوانین</a></li>
+                <li><a href="#" class="text-[14px]">تماس با ما</a></li>
+              </ul>
             </div>
           </li>
         </ul>
       </nav>
-      <div
-        class="w-full h-[100vh] bg-black/30 hidden transition backdrop-blur-[5px] group-has-[.links:hover]:block"
-      ></div>
-    </div>
     <hr class="border-text-border" />
+    <section class="w-full relative">
+         <img class="sliders absolute top-0 right-0 left-0 animate-slider-first" src="./assets/assets/slider/slider1.jfif" alt="slider1">
+          <img class="sliders absolute top-0 right-0 left-0 animate-slider-second"  src="./assets/assets/slider/slider2.jfif" alt="slider2">
+    </section>
+    <div class="overlay"></div>
   </body>
 </html>
