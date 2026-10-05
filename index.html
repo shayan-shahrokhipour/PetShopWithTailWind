@@ -23,7 +23,9 @@
         --color-icon: #ffd700;
         --animate-slider-first:first 9s  infinite;
         --animate-slider-second:second 9s  infinite;
+        --animate-cards-move:move 20s linear infinite alternate;
         --color-button: #7dd3fc;
+        --color-offer:#6c3b70
       }
 
       @keyframes first{
@@ -45,6 +47,16 @@
           opacity: 0;
         }
       }
+
+      @keyframes move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(980px);
+  }
+}
       
       @layer components{
         .sliders{
@@ -62,7 +74,7 @@
         }
         
         .card{
-          @apply w-[15%]  h-[100%] bg-white shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)] text-center overflow-hidden
+          @apply lg:w-[15%] w-[45%] sm:w-[25%] md:w-[20%]  h-[100%] bg-white shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)] text-center overflow-hidden
         }
 
         .card .categoryImg{
@@ -75,26 +87,40 @@
         }
 
         .cardbestseller{
-          @apply w-[15%] border border-[rgb(211,209,209)] rounded-[5px]
+          @apply lg:w-[15%] w-[45%] sm:w-[25%] md:w-[20%] border border-[rgb(211,209,209)] rounded-[5px] shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)]
+        }
+         .badgeandprice{
+          @apply w-full flex justify-around
         }
 
-        @media only screen and (max-width:567px){
-          .card,.cardbestseller{
-            width: 45%;
-          }
-          
-        }
-        @media only screen and (min-width:568px) and (max-width:767px){
-          .card,.cardbestseller{
-           width: 25%;
-          }
+        .badgeandprice p{
+          @apply line-through 
         }
 
-        @media only screen and (min-width:768px) and (max-width:1024px){
-          .card,.cardbestseller {
-            width: 20%;
-          }
+        .bestOffer{
+          @apply w-[90%] m-[10px_auto]  h-[300px] bg-[#fff]  sm:animate-cards-move 
         }
+        
+        .bestOffer .description{
+         @apply w-[80%] m-auto text-[15px]
+        }
+
+        .bestOffer img{
+          @apply w-[50%] h-[150px]  m-auto
+        }
+
+       .badge{
+        @apply w-[15%] h-[25px] text-center  rounded-[25px] bg-[red] text-white
+       }
+
+       .dogImg{
+        @apply bg-offer w-[90%] md:w-[14%] h-auto md:h-[250px] 
+       }
+
+       
+       
+           
+        
       }
      
     </style>
@@ -489,17 +515,18 @@
             <p>+40 آیتم</p>
  
        </section>
-       <section class="card group/Scale">
-            <img  class="categoryImg" src="./assets/assets/images/accesories.jfif" alt="cat">
-            <a href="#"><p>سلامتی و بهداشت</p></a>
-            <p>+40 آیتم</p>
- 
-       </section>
+            <section class="card group/Scale">
+                  <img  class="categoryImg" src="./assets/assets/images/accesories.jfif" alt="cat">
+                  <a href="#"><p>سلامتی و بهداشت</p></a>
+                  <p>+40 آیتم</p>
+      
+            </section>
+        </section>
         </section>
         <section>
           <h3 class="text-xl font-bold p-[15px]"><i class="fa-solid fa-trophy text-icon"></i>پرفروش ها</h3>
         </section>
-         <section class="w-full h-auto flex justify-around flex-wrap gap-[10px]">
+         <section class="w-[99%] h-auto flex justify-around flex-wrap gap-[10px]">
           <div class="cardbestseller">
                       <p>اسباب بازی پازلی مخصوص سگ</p>
                       <img class="w-[90%] h-[180px] m-auto" src="./assets/assets/category/puzzleToy.jpg" alt="puzzle">
@@ -596,7 +623,93 @@
                       </div>
           </div>
          </section>
+           <section class="w-full h-auto overflow-x-hidden">
+            <section class="w-[90%] sm:w-max h-[auto] sm:h-[350px] sm:flex sm:gap-[10px] sm:justify-around  items-center bg-offer m-[65px_auto] rounded-[10px]">
+              <div class="dogImg bestOffer" >
+               <img class="w-[50%] h-[150px]" src="./assets/assets/images/پیشنهاد-شگفت-انگیز-1-scaled.png" alt="">
 
+              </div>
+               <div class="bestOffer">
+                <a href="#">
+                  <img  src="./assets/assets/products/مرغ-و-اردک-500x500.jpg" alt="reflex">
+                  <p class="description">تشویقی مداد ی گربه جو سرا با طعم مرغ و اردک یک عددی</p>
+                  <div class="badgeandprice w-full flex justify-around">
+                    <p>55,000</p>
+                    <span class="badge">13%</span>
+                  </div>
+                  <p class="text-center">48,000</p>
+                </a>
+               </div>
+               <div class="bestOffer">
+                <a href="#">
+                  <img  src="./assets/assets/products/گوش-گاو-و-بره-500x500.jpg" alt="reflex">
+                  <p class="description">تشویقی مدادی گربه جو سرا با طعم گوشت بره و گاو یک عددی</p>
+                  <div class="badgeandprice">
+                    <p>55,000</p>
+                    <span class="badge">13%</span>
+                  </div>
+                  <p class="text-center">48,000</p>
+                </a>
+               </div>
+               <div class="bestOffer">
+                <a href="#">
+                  <img  src="./assets/assets/products/سالمون-و-قزل-آلا-500x500.jpg" alt="reflex">
+                  <p class="description">
+                تشویقی مداد گربه جو سرا با طعم ماهی سالمون و قزل آلا یک عددی
+                </p>
+                  <div class="badgeandprice">
+                    <p>55,000</p>
+                    <span class="badge">13%</span>
+                  </div>
+                  <p class="text-center">48,000</p>
+                </a>
+               </div>
+               <div class="bestOffer">
+                <a href="#">
+                  <img  src="./assets/assets/products/50b84ab49e51b6d61082da3b3cae09942001b292_1664354316-500x500.jpg.webp" alt="reflex">
+                  <p class="description">تشویقی سگ طرح آب نبات وزن 50گرم -سبز</p>
+                  <div class="badgeandprice">
+                    <p>400,000</p>
+                    <span class="badge">25%</span>
+                  </div>
+                  <p class="text-center">300,000</p>
+                </a>
+               </div>
+               <div class="bestOffer">
+                <a href="#">
+                  <img  src="./assets/assets/products/Reflex-Urinary-Chicken-500x500.jpg.webp" alt="reflex">
+                  <p class="description">غذای خشک گربه رفلکس پلاس یورینری با طعم مرغ 1/5 کیلوگرم</p>
+                  <div class="badgeandprice">
+                    <p>1,850,000</p>
+                    <span class="badge">16%</span>
+                  </div>
+                  <p class="text-center">1,550,000</p>
+                </a>
+               </div>
+               <div class="bestOffer">
+                <a href="#">
+                  <img src="./assets/assets/products/sp-canine-science-plan-adult-small-mini-chicken-canned-500x500.png.webp" alt="reflex">
+                  <p class="description">کنسرو سگ بالغ نژاد کوچک هیلز با طمع مرغ وزن 200 گرم</p>
+                  <div class="badgeandprice">
+                    <p>550,000</p>
+                    <span class="badge">36%</span>
+                  </div>
+                  <p class="text-center">350,000</p>
+                </a>
+               </div>
+               <div class="dogImg bestOffer" >
+               <img class="w-[50%] h-[150px]" src="./assets/assets/images/پیشنهاد-شگفت-انگیز-1-scaled.png" alt="">
+
+              </div>
+            </section>
+           
+           </section>
+           <section class="w-full h-[300px]">
+                            <h3 class="text-xl font-bold text-center"><i class="fa-solid fa-paw"></i>دسته بندی های اصلی</h3>
+
+              <div class="w-[99%]">
+              </div>
+           </section>
     <div class="overlay"></div>
     
   </body>
