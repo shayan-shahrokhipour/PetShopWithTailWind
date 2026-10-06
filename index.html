@@ -114,10 +114,12 @@
        }
 
        .dogImg{
-        @apply bg-offer w-[90%] md:w-[14%] h-auto md:h-[250px] 
+        @apply bg-offer w-[90%] md:w-[50%] h-auto md:h-[250px] 
        }
 
-       
+       .categoryCards{
+        @apply w-[30%] sm:w-[25%] md:w-[20%] lg:w-[15%] h-auto text-center block
+       }
        
            
         
@@ -126,7 +128,7 @@
     </style>
     <title>Document</title>
   </head>
-  <body class="font-display group">
+  <body class="max-w-[1440px] m-[0_auto] font-display group">
     <header
       class="z-[300] md:w-[100%] h-[200px] md:h-auto flex justify-around items-start md:items-center flex-wrap"
     >
@@ -626,7 +628,7 @@
            <section class="w-full h-auto overflow-x-hidden">
             <section class="w-[90%] sm:w-max h-[auto] sm:h-[350px] sm:flex sm:gap-[10px] sm:justify-around  items-center bg-offer m-[65px_auto] rounded-[10px]">
               <div class="dogImg bestOffer" >
-               <img class="w-[50%] h-[150px]" src="./assets/assets/images/پیشنهاد-شگفت-انگیز-1-scaled.png" alt="">
+               <img class="w-[50%] md:w-[100%] h-[150px]" src="./assets/assets/images/پیشنهاد-شگفت-انگیز-1-scaled.png" alt="dog">
 
               </div>
                <div class="bestOffer">
@@ -698,18 +700,89 @@
                 </a>
                </div>
                <div class="dogImg bestOffer" >
-               <img class="w-[50%] h-[150px]" src="./assets/assets/images/پیشنهاد-شگفت-انگیز-1-scaled.png" alt="">
+               <img class="w-[50%] md:w-[100%] h-[150px]" src="./assets/assets/images/پیشنهاد-شگفت-انگیز-1-scaled.png" alt="">
 
               </div>
             </section>
            
            </section>
-           <section class="w-full h-[300px]">
+           <section class="w-full h-auto mb-[30px]">
                             <h3 class="text-xl font-bold text-center"><i class="fa-solid fa-paw"></i>دسته بندی های اصلی</h3>
 
-              <div class="w-[99%]">
+              <div class="w-[99%] h-auto flex flex-wrap justify-around">
+                  <a href="#" class="categoryCards group/main">
+                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/dogToy.jfif" alt="dogtoy">
+                    <p>اسباب بازی سگ</p>
+                  </a>
+                   <a href="#" class="categoryCards group/main">
+                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/tashvighi.jfif" alt="dogtoy">
+                    <p>اسنک و تشویقی سگ</p>
+                  </a>
+                  <a href="#" class="categoryCards group/main">
+                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/abead.jfif" alt="dogtoy">
+                    <p>سوپ و  کنسرو سگ</p>
+                  </a>
+                  <a href="#" class="categoryCards group/main">
+                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/catdryfood.jfif" alt="dogtoy">
+                    <p>غذای خشک گربه</p>
+                  </a>
+                  <a href="#" class="categoryCards group/main">
+                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/dogdryfood.jfif" alt="dogtoy">
+                    <p>تشویقی سگ</p>
+                  </a>
+                  <a href="#" class="categoryCards group/main">
+                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/soap&conserv.jfif" alt="dogtoy">
+                    <p>سوپ و  کنسرو گربه</p>
+                  </a>
+                  <a href="#" class="categoryCards group/main">
+                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/multi-vitamin-cat.jfif" alt="dogtoy">
+                    <p>مولتی ویتامین گربه</p>
+                  </a>
+                  <a href="#" class="categoryCards group/main">
+                    <img class="m-auto w-[80%] lg:w-[100%] rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/multi-vitamin-dog.jfif" alt="dogtoy">
+                    <p>مولتی ویتامین سگ</p>
+                  </a>
+                  <a href="#" class="categoryCards group/main">
+                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/health-dog.jfif" alt="dogtoy">
+                    <p>بهداشت و  نظافت سگ</p>
+                  </a>
+                  <a href="#" class="categoryCards group/main">
+                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/toy-cat.jfif" alt="dogtoy">
+                    <p>اسباب بازی گربه</p>
+                  </a>
+                  <a href="#" class="categoryCards group/main">
+                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/health-cat.jfif" alt="dogtoy">
+                    <p>بهداشت و  نظافت گربه</p>
+                  </a>
+                  <a href="#" class="categoryCards group/main">
+                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/tashvighi-cat.jfif" alt="dogtoy">
+                    <p>اسنک و  تشویقی گربه</p>
+                  </a>
               </div>
            </section>
+          
+             <section class="w-full h-auto md:h-auto  flex md:justify-around md:flex-row flex-col items-center  gap-[25px] md:gap-[0]">
+                <a  href="#" class="w-[95%] md:w-[48%] h-[100%] block">
+                   <img class="w-[100%] md:w-[100%] h-auto shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)]" src="./assets/assets/images/فله.jpg" alt="cat food">
+                </a>
+                <a href="#"  class="w-[95%] md:w-[48%] h-[100%] block">
+                  <img class="w-[100%] md:w-[100%]  h-auto shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)]" src="./assets/assets/images/فله2.jpg" alt="cat food">
+                </a>
+             </section>
+             <section class="w-[99%] h-[300px] mt-[25px] flex flex-wrap justify-around gap-[10px]">
+              <a class="lg:w-[40%] md:w-[45%] w-[90%] h-[300px] block ">
+                <img class="rounded-[5px] w-[100%] h-[100%]" src="./assets/assets/middle/middle-img.jpg" alt="">
+              </a>
+              <a class="lg:w-[15%] md:w-[45%] w-[90%] h-[300px] block ">
+                <img class="rounded-[5px] w-[100%] h-[100%]" src="./assets/assets/middle/middle-small.jfif" alt="">
+              </a>
+               <a class="lg:w-[20%] md:w-[45%] w-[90%]  block ">
+                <img class="rounded-[5px] w-[100%] h-[100%]" src="./assets/assets/middle/middle-health.jfif" alt="">
+              </a>
+                <a class="lg:w-[20%] md:w-[45%] w-[90%]  block ">
+                <img class="rounded-[5px] w-[100%] h-[100%]" src="./assets/assets/middle/free.jfif" alt="">
+              </a>
+             </section>
     <div class="overlay"></div>
     
   </body>
