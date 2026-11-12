@@ -21,110 +21,118 @@
         --color-brand: #95d5b2;
         --color-text-border: #d1d5db;
         --color-icon: #ffd700;
-        --animate-slider-first:first 9s  infinite;
-        --animate-slider-second:second 9s  infinite;
-        --animate-cards-move:move 20s linear infinite alternate;
+        --animate-slider-first: first 9s infinite;
+        --animate-slider-second: second 9s infinite;
+        --animate-cards-move: move 20s linear infinite alternate;
         --color-button: #7dd3fc;
-        --color-offer:#6c3b70
+        --color-offer: #6c3b70;
+        --color-border:rgb(211,209,209);
+        --color-footer:#d8f3d3
       }
 
-      @keyframes first{
-        0%,33%{
-         opacity: 1;
-        }33%,66%{
+      @keyframes first {
+        0%,
+        33% {
+          opacity: 1;
+        }
+        33%,
+        66% {
           opacity: 0;
-        }66%,100%{
+        }
+        66%,
+        100% {
           opacity: 1;
         }
       }
 
-      @keyframes second{
-        0%,33%{
+      @keyframes second {
+        0%,
+        33% {
           opacity: 0;
-        }33%,66%{
+        }
+        33%,
+        66% {
           opacity: 1;
-        }66%,100%{
+        }
+        66%,
+        100% {
           opacity: 0;
         }
       }
 
       @keyframes move {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(980px);
-  }
-}
-      
-      @layer components{
-        .sliders{
-           @apply md:w-[98%] md:h-[400px] w-[90%] h-[250px] m-[10px_auto] rounded-[10px]
-        }
-        .overlay{
-          @apply z-[200] fixed top-[140px] w-full h-[calc(100vh-140px)] bg-black/25  hidden transition backdrop-blur-[5px] group-has-[.links:hover]:md:block
-        }
-        .linkAnchor{
-         @apply text-[14px] px-[10px] after:bg-brand transition duration-200 hover:text-brand relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:right-0 after:bottom-[-3px] hover:after:w-full after:transition-all after:duration-300 after:z-[300]
+        from {
+          transform: translateX(0);
         }
 
-        .megaMenu{
-          @apply hidden z-[200] w-full h-auto bg-white absolute right-0 top-[26px] justify-around  rounded-[0_0_5px_5px] 
+        to {
+          transform: translateX(980px);
         }
-        
-        .card{
-          @apply lg:w-[15%] w-[45%] sm:w-[25%] md:w-[20%]  h-[100%] bg-white shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)] text-center overflow-hidden
-        }
-
-        .card .categoryImg{
-          @apply w-full transition-transform duration-300  group-hover/Scale:scale-105
-        }
-
-        .buttonStyle{
-          @apply w-[90%] h-[24px] text-[14px] m-auto text-[#fff] bg-button rounded-[5px] shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)] 
-          cursor-pointer transition duration-200 hover:bg-[#2088bd]
-        }
-
-        .cardbestseller{
-          @apply lg:w-[15%] w-[45%] sm:w-[25%] md:w-[20%] border border-[rgb(211,209,209)] rounded-[5px] shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)]
-        }
-         .badgeandprice{
-          @apply w-full flex justify-around m-[0_auto]
-        }
-
-        .badgeandprice p{
-          @apply line-through 
-        }
-
-        .bestOffer{
-          @apply w-[90%] m-[10px_auto]  h-[300px] bg-[#fff]  sm:animate-cards-move 
-        }
-        
-        .bestOffer .description{
-         @apply w-[80%] m-auto text-[15px]
-        }
-
-        .bestOffer img{
-          @apply w-[50%] h-[150px]  m-auto
-        }
-
-       .badge{
-        @apply w-[25%]  text-center  rounded-[25px] bg-[red] text-white
-       }
-
-       .dogImg{
-        @apply bg-offer w-[90%] md:w-[50%] h-auto md:h-[250px] 
-       }
-
-       .categoryCards{
-        @apply w-[30%] sm:w-[25%] md:w-[20%] lg:w-[15%] h-auto text-center block
-       }
-       
-           
-        
       }
-     
+
+      @layer components {
+        .sliders {
+          @apply md:w-[98%] md:h-[400px] w-[90%] h-[250px] m-[10px_auto] rounded-[10px];
+        }
+        .overlay {
+          @apply z-[200] fixed top-[140px] w-full h-[calc(100vh-140px)] bg-black/25  hidden transition backdrop-blur-[5px] group-has-[.links:hover]:md:block;
+        }
+        .linkAnchor {
+          @apply text-[14px] px-[10px] after:bg-brand transition duration-200 hover:text-brand relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:right-0 after:bottom-[-3px] hover:after:w-full after:transition-all after:duration-300 after:z-[300];
+        }
+
+        .megaMenu {
+          @apply hidden z-[200] w-full h-auto bg-white absolute right-0 top-[26px] justify-around  rounded-[0_0_5px_5px];
+        }
+
+        .card {
+          @apply lg:w-[15%] w-[45%] sm:w-[25%] md:w-[20%]  h-[100%] bg-white shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)] text-center overflow-hidden;
+        }
+
+        .card .categoryImg {
+          @apply w-full transition-transform duration-300  group-hover/Scale:scale-105;
+        }
+
+        .buttonStyle {
+          @apply w-[90%] h-[24px] text-[14px] m-auto text-[#fff] bg-button rounded-[5px] shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)] 
+          cursor-pointer transition duration-200 hover:bg-[#2088bd];
+        }
+
+        .cardbestseller {
+          @apply lg:w-[15%] w-[45%] sm:w-[25%] md:w-[20%] border border-[rgb(211,209,209)] rounded-[5px] shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)];
+        }
+        .badgeandprice {
+          @apply w-full flex justify-around m-[0_auto];
+        }
+
+        .badgeandprice p {
+          @apply line-through;
+        }
+
+        .bestOffer {
+          @apply w-[90%] m-[10px_auto]  h-[300px] bg-[#fff]  sm:animate-cards-move;
+        }
+
+        .bestOffer .description {
+          @apply w-[80%] m-auto text-[15px];
+        }
+
+        .bestOffer img {
+          @apply w-[50%] h-[150px]  m-auto;
+        }
+
+        .badge {
+          @apply w-[25%]  text-center  rounded-[25px] bg-[red] text-white;
+        }
+
+        .dogImg {
+          @apply bg-offer w-[90%] md:w-[50%] h-auto md:h-[250px];
+        }
+
+        .categoryCards {
+          @apply w-[30%] sm:w-[25%] md:w-[20%] lg:w-[15%] h-auto text-center block;
+        }
+      }
     </style>
     <title>Document</title>
   </head>
@@ -159,712 +167,986 @@
         <button
           class="border p-2 rounded border-text-border text-center text-xs transition duration-200 hover:border-[#7C3AED] cursor-pointer"
         >
-          <i class="fa-solid fa-right-to-bracket text-black"></i>ورود | ثبت
-          نام
+          <i class="fa-solid fa-right-to-bracket text-black"></i>ورود | ثبت نام
         </button>
         <i class="fas fa-shopping-cart"></i>
       </div>
     </header>
-  
-      <nav class="z-[300] w-[100%] max-md:overflow-x-auto scrollbar-none relative">
-        <ul
-          class="md:max-w-[60%] flex md:px-[40px] gap-[25px] md:gap-[12px] w-max"
-        >
-          <li class="links group/cat flex gap-[5px]">
-            <img
-              class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
-              src="./assets/assets/paw-min.webp"
-              alt="paw"
-            /><a
-              href="#"
-              class="linkAnchor"  
-              >گربه</a
-            >
-            <div
-              class=" group-hover/cat:md:flex megaMenu"
-            >
-            <div>
-                <h1 class="text-black">غذای گربه</h1>
-                <ul>
-  <li><a href="#" class="text-[14px]">غذای خشک گربه بالغ</a></li>
-  <li><a href="#" class="text-[14px]">غذای خشک بچه گربه</a></li>
-  <li><a href="#" class="text-[14px]">غذای خشک گربه عقیم شده</a></li>
-  <li><a href="#" class="text-[14px]">غذای خشک گربه مسن</a></li>
-  <li><a href="#" class="text-[14px]">غذای خشک فله</a></li>
-</ul>
 
+    <nav
+      class="z-[300] w-[100%] max-md:overflow-x-auto scrollbar-none relative"
+    >
+      <ul
+        class="md:max-w-[60%] flex md:px-[40px] gap-[25px] md:gap-[12px] w-max"
+      >
+        <li class="links group/cat flex gap-[5px]">
+          <img
+            class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
+            src="./assets/assets/paw-min.webp"
+            alt="paw"
+          /><a href="#" class="linkAnchor">گربه</a>
+          <div class="group-hover/cat:md:flex megaMenu">
+            <div>
+              <h1 class="text-black">غذای گربه</h1>
+              <ul>
+                <li><a href="#" class="text-[14px]">غذای خشک گربه بالغ</a></li>
+                <li><a href="#" class="text-[14px]">غذای خشک بچه گربه</a></li>
+                <li>
+                  <a href="#" class="text-[14px]">غذای خشک گربه عقیم شده</a>
+                </li>
+                <li><a href="#" class="text-[14px]">غذای خشک گربه مسن</a></li>
+                <li><a href="#" class="text-[14px]">غذای خشک فله</a></li>
+              </ul>
             </div>
             <div>
               <h1>درمانی گربه</h1>
-             <ul>
-  <li><a href="#" class="text-[14px]">آرامبخش</a></li>
-  <li><a href="#" class="text-[14px]">استخوان و مفاصل</a></li>
-  <li><a href="#" class="text-[14px]">پوست و مو</a></li>
-  <li><a href="#" class="text-[14px]">چاقی</a></li>
-  <li><a href="#" class="text-[14px]">حساسیت</a></li>
-  <li><a href="#" class="text-[14px]">دستگاه گوارش</a></li>
-  <li><a href="#" class="text-[14px]">دهان و دندان</a></li>
-  <li><a href="#" class="text-[14px]">دیابت</a></li>
-  <li><a href="#" class="text-[14px]">ریکاوری</a></li>
-  <li><a href="#" class="text-[14px]">قلب</a></li>
-  <li><a href="#" class="text-[14px]">کبد</a></li>
-  <li><a href="#" class="text-[14px]">کلیه</a></li>
-  <li><a href="#" class="text-[14px]">مثانه</a></li>
-</ul>
+              <ul>
+                <li><a href="#" class="text-[14px]">آرامبخش</a></li>
+                <li><a href="#" class="text-[14px]">استخوان و مفاصل</a></li>
+                <li><a href="#" class="text-[14px]">پوست و مو</a></li>
+                <li><a href="#" class="text-[14px]">چاقی</a></li>
+                <li><a href="#" class="text-[14px]">حساسیت</a></li>
+                <li><a href="#" class="text-[14px]">دستگاه گوارش</a></li>
+                <li><a href="#" class="text-[14px]">دهان و دندان</a></li>
+                <li><a href="#" class="text-[14px]">دیابت</a></li>
+                <li><a href="#" class="text-[14px]">ریکاوری</a></li>
+                <li><a href="#" class="text-[14px]">قلب</a></li>
+                <li><a href="#" class="text-[14px]">کبد</a></li>
+                <li><a href="#" class="text-[14px]">کلیه</a></li>
+                <li><a href="#" class="text-[14px]">مثانه</a></li>
+              </ul>
             </div>
             <div>
               <h1>سوپ و کنسرو گربه</h1>
               <ul>
-  <li><a href="#" class="text-[14px]">پوچ گربه</a></li>
-  <li><a href="#" class="text-[14px]">کنسرو گربه</a></li>
-  <li><a href="#" class="text-[14px]">ووم گربه</a></li>
-  <li><a href="#" class="text-[14px]">پودینگ</a></li>
-</ul>
+                <li><a href="#" class="text-[14px]">پوچ گربه</a></li>
+                <li><a href="#" class="text-[14px]">کنسرو گربه</a></li>
+                <li><a href="#" class="text-[14px]">ووم گربه</a></li>
+                <li><a href="#" class="text-[14px]">پودینگ</a></li>
+              </ul>
             </div>
             <div>
               <h1>تشویقی و مکمل</h1>
               <ul>
-  <li><a href="#" class="text-[14px]">اسنک تشویقی</a></li>
-  <li><a href="#" class="text-[14px]">شیر خشک</a></li>
-  <li><a href="#" class="text-[14px]">مالت گربه</a></li>
-  <li><a href="#" class="text-[14px]">مولتی ویتامین</a></li>
-  <li><a href="#" class="text-[14px]">بستنی</a></li>
-</ul>
+                <li><a href="#" class="text-[14px]">اسنک تشویقی</a></li>
+                <li><a href="#" class="text-[14px]">شیر خشک</a></li>
+                <li><a href="#" class="text-[14px]">مالت گربه</a></li>
+                <li><a href="#" class="text-[14px]">مولتی ویتامین</a></li>
+                <li><a href="#" class="text-[14px]">بستنی</a></li>
+              </ul>
             </div>
             <div>
               <h1>ملزومات نگهداری</h1>
               <ul>
-  <li><a href="#" class="text-[14px]">آب خوری اتوماتیک</a></li>
-  <li><a href="#" class="text-[14px]">اسباب بازی</a></li>
-  <li><a href="#" class="text-[14px]">اسکرچر</a></li>
-  <li><a href="#" class="text-[14px]">ظرف آب و غذا</a></li>
-  <li><a href="#" class="text-[14px]">قلاده</a></li>
-  <li><a href="#" class="text-[14px]">ملزومات حمل و نقل</a></li>
-  <li><a href="#" class="text-[14px]">تشک و جای خواب گریه</a></li>
-  <li><a href="#" class="text-[14px]">خاک و ملزومات</a></li>
-</ul>
+                <li><a href="#" class="text-[14px]">آب خوری اتوماتیک</a></li>
+                <li><a href="#" class="text-[14px]">اسباب بازی</a></li>
+                <li><a href="#" class="text-[14px]">اسکرچر</a></li>
+                <li><a href="#" class="text-[14px]">ظرف آب و غذا</a></li>
+                <li><a href="#" class="text-[14px]">قلاده</a></li>
+                <li><a href="#" class="text-[14px]">ملزومات حمل و نقل</a></li>
+                <li><a href="#" class="text-[14px]">تشک و جای خواب گریه</a></li>
+                <li><a href="#" class="text-[14px]">خاک و ملزومات</a></li>
+              </ul>
             </div>
             <div>
-              <h1>بهداشت و نظافت گربه </h1>
+              <h1>بهداشت و نظافت گربه</h1>
               <ul>
-  <li><a href="#" class="text-[14px]">برس شانه و گره باز کن</a></li>
-  <li><a href="#" class="text-[14px]">پرز گیر و دستمال مرطوب</a></li>
-  <li><a href="#" class="text-[14px]">پد و زیر انداز</a></li>
-  <li><a href="#" class="text-[14px]">دهان و دندان</a></li>
-  <li><a href="#" class="text-[14px]">شامپو و لوسیون</a></li>
-  <li><a href="#" class="text-[14px]">ناخنگیر و سوهان</a></li>
-  <li><a href="#" class="text-[14px]">مراقبت از چشم و گوش</a></li>
-  <li><a href="#" class="text-[14px]">اسپری ضد عفونی کننده</a></li>
-</ul>
+                <li>
+                  <a href="#" class="text-[14px]">برس شانه و گره باز کن</a>
+                </li>
+                <li>
+                  <a href="#" class="text-[14px]">پرز گیر و دستمال مرطوب</a>
+                </li>
+                <li><a href="#" class="text-[14px]">پد و زیر انداز</a></li>
+                <li><a href="#" class="text-[14px]">دهان و دندان</a></li>
+                <li><a href="#" class="text-[14px]">شامپو و لوسیون</a></li>
+                <li><a href="#" class="text-[14px]">ناخنگیر و سوهان</a></li>
+                <li><a href="#" class="text-[14px]">مراقبت از چشم و گوش</a></li>
+                <li>
+                  <a href="#" class="text-[14px]">اسپری ضد عفونی کننده</a>
+                </li>
+              </ul>
             </div>
-            </div>
-          </li>
-          <li class="group/dog links flex gap-[5px]">
-            <img
-              class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
-              src="./assets/assets/dog-min.webp"
-              alt="dog"
-            /><a
-              href="#"
-              class="linkAnchor"
-              >سگ</a
-            >
-            <div
-              class="group-hover/dog:md:flex megaMenu"
-            >
+          </div>
+        </li>
+        <li class="group/dog links flex gap-[5px]">
+          <img
+            class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
+            src="./assets/assets/dog-min.webp"
+            alt="dog"
+          /><a href="#" class="linkAnchor">سگ</a>
+          <div class="group-hover/dog:md:flex megaMenu">
             <div>
-                <h1 class="text-black">غذای سگ</h1>
-               <ul>
-  <li><a href="#" class="text-[14px]">غذای خشک سگ بالغ</a></li>
-  <li><a href="#" class="text-[14px]">غذای خشک توله سگ</a></li>
-  <li><a href="#" class="text-[14px]">غذای خشک سگ عقیم شده</a></li>
-  <li><a href="#" class="text-[14px]">غذای خشک سگ مسن</a></li>
-  <li><a href="#" class="text-[14px]">غذای خشک فله</a></li>
-</ul>
-
+              <h1 class="text-black">غذای سگ</h1>
+              <ul>
+                <li><a href="#" class="text-[14px]">غذای خشک سگ بالغ</a></li>
+                <li><a href="#" class="text-[14px]">غذای خشک توله سگ</a></li>
+                <li>
+                  <a href="#" class="text-[14px]">غذای خشک سگ عقیم شده</a>
+                </li>
+                <li><a href="#" class="text-[14px]">غذای خشک سگ مسن</a></li>
+                <li><a href="#" class="text-[14px]">غذای خشک فله</a></li>
+              </ul>
             </div>
             <div>
               <h1>درمانی سگ</h1>
               <ul>
-  <li><a href="#" class="text-[14px]">آرامبخش</a></li>
-  <li><a href="#" class="text-[14px]">استخوان و مفاصل</a></li>
-  <li><a href="#" class="text-[14px]">پوست و مو</a></li>
-  <li><a href="#" class="text-[14px]">چاقی</a></li>
-  <li><a href="#" class="text-[14px]">حساسیت</a></li>
-  <li><a href="#" class="text-[14px]">دستگاه گوارش</a></li>
-  <li><a href="#" class="text-[14px]">دهان و دندان</a></li>
-  <li><a href="#" class="text-[14px]">دیابت</a></li>
-  <li><a href="#" class="text-[14px]">ریکاوری</a></li>
-  <li><a href="#" class="text-[14px]">قلب</a></li>
-  <li><a href="#" class="text-[14px]">کبد</a></li>
-  <li><a href="#" class="text-[14px]">کلیه</a></li>
-  <li><a href="#" class="text-[14px]">مثانه</a></li>
-</ul>
+                <li><a href="#" class="text-[14px]">آرامبخش</a></li>
+                <li><a href="#" class="text-[14px]">استخوان و مفاصل</a></li>
+                <li><a href="#" class="text-[14px]">پوست و مو</a></li>
+                <li><a href="#" class="text-[14px]">چاقی</a></li>
+                <li><a href="#" class="text-[14px]">حساسیت</a></li>
+                <li><a href="#" class="text-[14px]">دستگاه گوارش</a></li>
+                <li><a href="#" class="text-[14px]">دهان و دندان</a></li>
+                <li><a href="#" class="text-[14px]">دیابت</a></li>
+                <li><a href="#" class="text-[14px]">ریکاوری</a></li>
+                <li><a href="#" class="text-[14px]">قلب</a></li>
+                <li><a href="#" class="text-[14px]">کبد</a></li>
+                <li><a href="#" class="text-[14px]">کلیه</a></li>
+                <li><a href="#" class="text-[14px]">مثانه</a></li>
+              </ul>
             </div>
-              <div>
+            <div>
               <h1>سوپ و کنسرو سگ</h1>
               <ul>
-  <li><a href="#" class="text-[14px]">پوچ سگ</a></li>
-  <li><a href="#" class="text-[14px]">کنسرو سگ</a></li>
-  <li><a href="#" class="text-[14px]">ووم سگ</a></li>
-  <li><a href="#" class="text-[14px]">پودینگ</a></li>
-</ul>
+                <li><a href="#" class="text-[14px]">پوچ سگ</a></li>
+                <li><a href="#" class="text-[14px]">کنسرو سگ</a></li>
+                <li><a href="#" class="text-[14px]">ووم سگ</a></li>
+                <li><a href="#" class="text-[14px]">پودینگ</a></li>
+              </ul>
             </div>
             <div>
               <h1>تشویقی و مکمل</h1>
               <ul>
-  <li><a href="#" class="text-[14px]">اسنک تشویقی</a></li>
-  <li><a href="#" class="text-[14px]">شیر خشک</a></li>
-  <li><a href="#" class="text-[14px]">مالت سگ</a></li>
-  <li><a href="#" class="text-[14px]">مولتی ویتامین</a></li>
-  <li><a href="#" class="text-[14px]">بستنی</a></li>
-</ul>
+                <li><a href="#" class="text-[14px]">اسنک تشویقی</a></li>
+                <li><a href="#" class="text-[14px]">شیر خشک</a></li>
+                <li><a href="#" class="text-[14px]">مالت سگ</a></li>
+                <li><a href="#" class="text-[14px]">مولتی ویتامین</a></li>
+                <li><a href="#" class="text-[14px]">بستنی</a></li>
+              </ul>
             </div>
             <div>
               <h1>ملزومات نگهداری</h1>
               <ul>
-  <li><a href="#" class="text-[14px]">آب خوری اتوماتیک</a></li>
-  <li><a href="#" class="text-[14px]">اسباب بازی</a></li>
-  <li><a href="#" class="text-[14px]">اسکرچر</a></li>
-  <li><a href="#" class="text-[14px]">ظرف آب و غذا</a></li>
-  <li><a href="#" class="text-[14px]">قلاده</a></li>
-  <li><a href="#" class="text-[14px]">ملزومات حمل و نقل</a></li>
-  <li><a href="#" class="text-[14px]">تشک و جای خواب سگ</a></li>
-  <li><a href="#" class="text-[14px]">خاک و ملزومات</a></li>
-</ul>
+                <li><a href="#" class="text-[14px]">آب خوری اتوماتیک</a></li>
+                <li><a href="#" class="text-[14px]">اسباب بازی</a></li>
+                <li><a href="#" class="text-[14px]">اسکرچر</a></li>
+                <li><a href="#" class="text-[14px]">ظرف آب و غذا</a></li>
+                <li><a href="#" class="text-[14px]">قلاده</a></li>
+                <li><a href="#" class="text-[14px]">ملزومات حمل و نقل</a></li>
+                <li><a href="#" class="text-[14px]">تشک و جای خواب سگ</a></li>
+                <li><a href="#" class="text-[14px]">خاک و ملزومات</a></li>
+              </ul>
             </div>
             <div>
-              <h1>بهداشت و نظافت سگ </h1>
+              <h1>بهداشت و نظافت سگ</h1>
               <ul>
-                 <li><a href="#" class="text-[14px]">برس شانه و گره باز کن</a></li>
-                  <li><a href="#" class="text-[14px]">پرز گیر و دستمال مرطوب</a></li>
-                  <li><a href="#" class="text-[14px]">پد و زیر انداز</a></li>
-                  <li><a href="#" class="text-[14px]">دهان و دندان </a></li>
-                  <li><a href="#" class="text-[14px]">شامپو و لوسیون</a></li>
-                  <li><a href="#" class="text-[14px]">ناخنگیر و سوهان</a></li>
-                  <li><a href="#" class="text-[14px]">مراقبت از چشم و گوش</a></li>
-                  <li><a href="#" class="text-[14px]">اسپری ضد عفونی کننده</a></li>
-               
+                <li>
+                  <a href="#" class="text-[14px]">برس شانه و گره باز کن</a>
+                </li>
+                <li>
+                  <a href="#" class="text-[14px]">پرز گیر و دستمال مرطوب</a>
+                </li>
+                <li><a href="#" class="text-[14px]">پد و زیر انداز</a></li>
+                <li><a href="#" class="text-[14px]">دهان و دندان </a></li>
+                <li><a href="#" class="text-[14px]">شامپو و لوسیون</a></li>
+                <li><a href="#" class="text-[14px]">ناخنگیر و سوهان</a></li>
+                <li><a href="#" class="text-[14px]">مراقبت از چشم و گوش</a></li>
+                <li>
+                  <a href="#" class="text-[14px]">اسپری ضد عفونی کننده</a>
+                </li>
               </ul>
             </div>
-              
-            </div>
-          </li>
-          <li class="group/rodents links flex gap-[5px]">
-            <img
-              class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
-              src="./assets/assets/rabbit-min.webp"
-              alt="rabbit"
-            /><a
-              href="#"
-              class="linkAnchor"
-              >جوندگان</a
-            >
-            <div
-              class="megaMenu group-hover/rodents:md:flex"
-            >
-              <h1 class="text-black">جوندگان</h1>
-            </div>
-          </li>
-          <li class="group/bird links flex gap-[5px]">
-            <img
-              class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
-              src="./assets/assets/parrot-min.webp"
-              alt="parrot"
-            /><a
-              href="#"
-              class="linkAnchor"
-              >پرندگان</a
-            >
-            <div
-              class="group-hover/bird:md:flex megaMenu"
-            >
-              <h1 class="text-black">پرندگان</h1>
-            </div>
-          </li>
-          <li class="group/oceanic links flex gap-[5px]">
-            <img
-              class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
-              src="./assets/assets/sea-life-min.webp"
-              alt="sealife"
-            /><a
-              href="#"
-              class="linkAnchor"
-              >آبزیان</a
-            >
-            <div
-              class="group-hover/oceanic:md:flex megaMenu"
-            >
-              <h1 class="text-black">آبزیان</h1>
-            </div>
-          </li>
-          <li class="group/brand links flex gap-[5px] whitespace-nowrap">
-            <img
-              class="w-[65%] h-[25px] md:w-[32%] md:h-[25px]"
-              src="./assets/assets/brand-menu-icon-verified.png"
-              alt="brands"
-            /><a
-              href="#"
-              class="linkAnchor"
-              >برند ها</a
-            >
-            <div
-              class=" group-hover/brand:md:flex megaMenu"
-            >
-              <h1 class="text-black">برند ها</h1>
-            </div>
-          </li>
-          <li class="group/bestseller links flex gap-[5px] whitespace-nowrap">
-            <img
-              class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
-              src="./assets/assets/hot-sale-min.webp"
-              alt="hotsale"
-            /><a
-              href="#"
-              class="linkAnchor"
-              >فروش ویژه</a
-            >
-            <div
-              class="group-hover/bestseller:md:flex megaMenu"
-            >
-              <h1 class="text-black">فروش ویژه</h1>
-            </div>
-          </li>
-          <li class="links group/magazine flex gap-[5px]">
-            <img
-              class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
-              src="./assets/assets/magazine-min.webp"
-              alt="magazine"
-            /><a
-              href="#"
-              class="linkAnchor"
-              >مقالات</a
-            >
-            <div
-              class="group-hover/magazine:md:flex megaMenu"
-            >
-              <h1 class="text-black">مقالات</h1>
-            </div>
-          </li>
-          <li class="links group/poshtibani flex gap-[5px]">
-            <img
-              class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
-              src="./assets/assets/customer-service-min.webp"
-              alt="customer"
-            /><a
-              href="#"
-              class="linkAnchor"
-              >پشتیبانی</a
-            >
-            <div
-              class="z-[200]  absolute md:right-[20%] left-0 top-[26px] hidden w-[15%] h-auto bg-white group-hover/poshtibani:md:flex flex-col m-[0_auto] rounded-[0_0_5px_5px] after:z-[300]"
-            >
-              <h1 class="text-black">پشتیبانی</h1>
-              <ul class="flex flex-col justify-around">
-                <li><a href="#" class="text-[14px]">پیگیری سفارشات </a></li>
-                <li><a href="#" class="text-[14px]">رویه ارسال سفارش</a></li>
-                <li><a href="#" class="text-[14px]">شرایط و قوانین</a></li>
-                <li><a href="#" class="text-[14px]">تماس با ما</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
+          </div>
+        </li>
+        <li class="group/rodents links flex gap-[5px]">
+          <img
+            class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
+            src="./assets/assets/rabbit-min.webp"
+            alt="rabbit"
+          /><a href="#" class="linkAnchor">جوندگان</a>
+          <div class="megaMenu group-hover/rodents:md:flex">
+            <h1 class="text-black">جوندگان</h1>
+          </div>
+        </li>
+        <li class="group/bird links flex gap-[5px]">
+          <img
+            class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
+            src="./assets/assets/parrot-min.webp"
+            alt="parrot"
+          /><a href="#" class="linkAnchor">پرندگان</a>
+          <div class="group-hover/bird:md:flex megaMenu">
+            <h1 class="text-black">پرندگان</h1>
+          </div>
+        </li>
+        <li class="group/oceanic links flex gap-[5px]">
+          <img
+            class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
+            src="./assets/assets/sea-life-min.webp"
+            alt="sealife"
+          /><a href="#" class="linkAnchor">آبزیان</a>
+          <div class="group-hover/oceanic:md:flex megaMenu">
+            <h1 class="text-black">آبزیان</h1>
+          </div>
+        </li>
+        <li class="group/brand links flex gap-[5px] whitespace-nowrap">
+          <img
+            class="w-[65%] h-[25px] md:w-[32%] md:h-[25px]"
+            src="./assets/assets/brand-menu-icon-verified.png"
+            alt="brands"
+          /><a href="#" class="linkAnchor">برند ها</a>
+          <div class="group-hover/brand:md:flex megaMenu">
+            <h1 class="text-black">برند ها</h1>
+          </div>
+        </li>
+        <li class="group/bestseller links flex gap-[5px] whitespace-nowrap">
+          <img
+            class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
+            src="./assets/assets/hot-sale-min.webp"
+            alt="hotsale"
+          /><a href="#" class="linkAnchor">فروش ویژه</a>
+          <div class="group-hover/bestseller:md:flex megaMenu">
+            <h1 class="text-black">فروش ویژه</h1>
+          </div>
+        </li>
+        <li class="links group/magazine flex gap-[5px]">
+          <img
+            class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
+            src="./assets/assets/magazine-min.webp"
+            alt="magazine"
+          /><a href="#" class="linkAnchor">مقالات</a>
+          <div class="group-hover/magazine:md:flex megaMenu">
+            <h1 class="text-black">مقالات</h1>
+          </div>
+        </li>
+        <li class="links group/poshtibani flex gap-[5px]">
+          <img
+            class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
+            src="./assets/assets/customer-service-min.webp"
+            alt="customer"
+          /><a href="#" class="linkAnchor">پشتیبانی</a>
+          <div
+            class="z-[200] absolute md:right-[20%] left-0 top-[26px] hidden w-[15%] h-auto bg-white group-hover/poshtibani:md:flex flex-col m-[0_auto] rounded-[0_0_5px_5px] after:z-[300]"
+          >
+            <h1 class="text-black">پشتیبانی</h1>
+            <ul class="flex flex-col justify-around">
+              <li><a href="#" class="text-[14px]">پیگیری سفارشات </a></li>
+              <li><a href="#" class="text-[14px]">رویه ارسال سفارش</a></li>
+              <li><a href="#" class="text-[14px]">شرایط و قوانین</a></li>
+              <li><a href="#" class="text-[14px]">تماس با ما</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
     <hr class="border-text-border" />
     <section class="w-full relative">
-         <img class="sliders  animate-slider-first" src="./assets/assets/slider/slider1.jfif" alt="slider1">
-          <img class="sliders m-[0_auto] absolute top-0 right-0 left-0 animate-slider-second"  src="./assets/assets/slider/slider2.jfif" alt="slider2">
+      <img
+        class="sliders animate-slider-first"
+        src="./assets/assets/slider/slider1.jfif"
+        alt="slider1"
+      />
+      <img
+        class="sliders m-[0_auto] absolute top-0 right-0 left-0 animate-slider-second"
+        src="./assets/assets/slider/slider2.jfif"
+        alt="slider2"
+      />
     </section>
-       <section class="w-full  h-auto p-[10px]">
-        <h3 class="text-xl font-bold p-[15px]"><i class="fa-solid fa-paw color-trophy"></i>خرید بر اساس دسته بندی </h3>
-        <section class="w-[98%] m-auto  h-[100%] flex   flex-wrap justify-around gap-[10px]">
-          <section class="card group/Scale">
-            <img class="categoryImg" src="./assets/assets/images/dog.avif" alt="dogs">
-            <a href="#"><p>غذای سگ</p></a>
-            <p>+100 آیتم</p>
-          </section>
-          <section class="card group/Scale">
-            <img class="categoryImg" src="./assets/assets/images/cat.webp" alt="cat">
-            <a href="#"><p>غذای گربه</p></a>
-            <p>+100 آیتم</p>
-          </section>
-          <section class="card group/Scale">
-            <img class="categoryImg" src="./assets/assets/images/toys.jfif" alt="cat">
-            <a href="#"><p>اسباب بازی سگ</p></a>
-            <p>+100 آیتم</p>
- 
-       </section>
-          <section class="card group/Scale">
-            <img  class="categoryImg"src="./assets/assets/images/catToys.jfif" alt="cat">
-            <a href="#"><p>اسباب بازی گربه </p></a>
-            <p>+150 آیتم</p>
+    <section class="w-full h-auto p-[10px]">
+      <h3 class="text-xl font-bold p-[15px]">
+        <i class="fa-solid fa-paw color-trophy"></i>خرید بر اساس دسته بندی
+      </h3>
+      <section
+        class="w-[98%] m-auto h-[100%] flex flex-wrap justify-around gap-[10px]"
+      >
+        <section class="card group/Scale">
+          <img
+            class="categoryImg"
+            src="./assets/assets/images/dog.avif"
+            alt="dogs"
+          />
+          <a href="#"><p>غذای سگ</p></a>
+          <p>+100 آیتم</p>
         </section>
         <section class="card group/Scale">
-            <img  class="categoryImg"src="./assets/assets/images/feeders.jfif" alt="cat">
-            <a href="#"><p>ظرف آب و غذا  </p></a>
-            <p>+80 آیتم</p>
- 
-       </section>
-       <section class="card group/Scale">
-            <img  class="categoryImg"src="./assets/assets/images/anti.jfif" alt="cat">
-            <a href="#"><p>ضد انگل ها</p></a>
-            <p>+40 آیتم</p>
- 
-       </section>
-       <section class="card group/Scale">
-            <img class="categoryImg" src="./assets/assets/images/health.jfif" alt="cat">
-            <a href="#"><p>سلامتی و بهداشت</p></a>
-            <p>+40 آیتم</p>
- 
-       </section>
-            <section class="card group/Scale">
-                  <img  class="categoryImg" src="./assets/assets/images/accesories.jfif" alt="cat">
-                  <a href="#"><p>سلامتی و بهداشت</p></a>
-                  <p>+40 آیتم</p>
-      
-            </section>
+          <img
+            class="categoryImg"
+            src="./assets/assets/images/cat.webp"
+            alt="cat"
+          />
+          <a href="#"><p>غذای گربه</p></a>
+          <p>+100 آیتم</p>
         </section>
-        </section> 
-        <section>
-          <h3 class="text-xl font-bold p-[15px]"><i class="fa-solid fa-trophy text-icon"></i>پرفروش ها</h3>
+        <section class="card group/Scale">
+          <img
+            class="categoryImg"
+            src="./assets/assets/images/toys.jfif"
+            alt="cat"
+          />
+          <a href="#"><p>اسباب بازی سگ</p></a>
+          <p>+100 آیتم</p>
         </section>
-         <section class="w-[99%] h-auto flex justify-around flex-wrap gap-[10px] ">
-          <div class="cardbestseller group/bestseller overflow-hidden">
-                      <p>اسباب بازی پازلی مخصوص سگ</p>
-                      <img class="group-hover/bestseller:scale-105 transition duration-200 w-[90%] h-[180px] m-auto" src="./assets/assets/category/puzzleToy.jpg" alt="puzzle">
-                      <div class="flex flex-col items-end p-[10px] gap-[5px]">
-                         <p>3,800,000</p>
-                          <div>
-                          <i class="fas fa-star text-icon"></i>
-                          <i class="fas fa-star text-icon"></i>
-                          <i class="fas fa-star text-icon"></i>
-                          <i class="fas fa-star text-icon"></i>
-                          <i class="fas fa-star text-icon"></i>
-                          </div>
-                          <button class="buttonStyle">برو به سبد خرید</button>
-                      </div>
+        <section class="card group/Scale">
+          <img
+            class="categoryImg"
+            src="./assets/assets/images/catToys.jfif"
+            alt="cat"
+          />
+          <a href="#"><p>اسباب بازی گربه</p></a>
+          <p>+150 آیتم</p>
+        </section>
+        <section class="card group/Scale">
+          <img
+            class="categoryImg"
+            src="./assets/assets/images/feeders.jfif"
+            alt="cat"
+          />
+          <a href="#"><p>ظرف آب و غذا</p></a>
+          <p>+80 آیتم</p>
+        </section>
+        <section class="card group/Scale">
+          <img
+            class="categoryImg"
+            src="./assets/assets/images/anti.jfif"
+            alt="cat"
+          />
+          <a href="#"><p>ضد انگل ها</p></a>
+          <p>+40 آیتم</p>
+        </section>
+        <section class="card group/Scale">
+          <img
+            class="categoryImg"
+            src="./assets/assets/images/health.jfif"
+            alt="cat"
+          />
+          <a href="#"><p>سلامتی و بهداشت</p></a>
+          <p>+40 آیتم</p>
+        </section>
+        <section class="card group/Scale">
+          <img
+            class="categoryImg"
+            src="./assets/assets/images/accesories.jfif"
+            alt="cat"
+          />
+          <a href="#"><p>سلامتی و بهداشت</p></a>
+          <p>+40 آیتم</p>
+        </section>
+      </section>
+    </section>
+    <section>
+      <h3 class="text-xl font-bold p-[15px]">
+        <i class="fa-solid fa-trophy text-icon"></i>پرفروش ها
+      </h3>
+    </section>
+    <section class="w-[99%] h-auto flex justify-around flex-wrap gap-[10px]">
+      <div class="cardbestseller group/bestseller overflow-hidden">
+        <p>اسباب بازی پازلی مخصوص سگ</p>
+        <img
+          class="group-hover/bestseller:scale-105 transition duration-200 w-[90%] h-[180px] m-auto"
+          src="./assets/assets/category/puzzleToy.jpg"
+          alt="puzzle"
+        />
+        <div class="flex flex-col items-end p-[10px] gap-[5px]">
+          <p>3,800,000</p>
+          <div>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
           </div>
-          <div class="cardbestseller group/bestseller overflow-hidden">
-                      <p class="text-center">غذای با کیفیت سگ</p>
-                      <img class="block group-hover/bestseller:scale-105 transition duration-200 w-[90%] h-[180px] m-auto" src="./assets/assets/category/premium-dog-feed.jpg" alt="puzzle">
-                      <div class="flex flex-col items-end p-[10px] gap-[5px]">
-                         <p>10,800,000</p>
-                          <div>
-                           <i class="far fa-star text-icon"></i>
-                <i class="fas fa-star-half-alt text-icon"></i>
+          <button class="buttonStyle">برو به سبد خرید</button>
+        </div>
+      </div>
+      <div class="cardbestseller group/bestseller overflow-hidden">
+        <p class="text-center">غذای با کیفیت سگ</p>
+        <img
+          class="block group-hover/bestseller:scale-105 transition duration-200 w-[90%] h-[180px] m-auto"
+          src="./assets/assets/category/premium-dog-feed.jpg"
+          alt="puzzle"
+        />
+        <div class="flex flex-col items-end p-[10px] gap-[5px]">
+          <p>10,800,000</p>
+          <div>
+            <i class="far fa-star text-icon"></i>
+            <i class="fas fa-star-half-alt text-icon"></i>
 
-                <i class="fas fa-star text-icon"></i>
-                <i class="fas fa-star text-icon"></i>
-                <i class="fas fa-star text-icon"></i>
-                          </div>
-                          <button class="buttonStyle">برو به سبد خرید</button>
-                      </div>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
           </div>
-          <div class="cardbestseller group/bestseller overflow-hidden">
-                      <p class="text-center">خاک گربه</p>
-                      <img class="group-hover/bestseller:scale-105 transition duration-200 w-[90%] h-[180px] m-auto" src="./assets/assets/category/cat-litter.jpg" alt="puzzle">
-                      <div class="flex flex-col items-end p-[10px] gap-[5px]">
-                         <p>3,400,000</p>
-                          <div>
-                           <i class="far fa-star text-icon"></i>
-                <i class="far fa-star text-icon"></i>
+          <button class="buttonStyle">برو به سبد خرید</button>
+        </div>
+      </div>
+      <div class="cardbestseller group/bestseller overflow-hidden">
+        <p class="text-center">خاک گربه</p>
+        <img
+          class="group-hover/bestseller:scale-105 transition duration-200 w-[90%] h-[180px] m-auto"
+          src="./assets/assets/category/cat-litter.jpg"
+          alt="puzzle"
+        />
+        <div class="flex flex-col items-end p-[10px] gap-[5px]">
+          <p>3,400,000</p>
+          <div>
+            <i class="far fa-star text-icon"></i>
+            <i class="far fa-star text-icon"></i>
 
-                <i class="fas fa-star text-icon"></i>
-                <i class="fas fa-star text-icon"></i>
-                <i class="fas fa-star text-icon"></i>
-                          </div>
-                          <button class="buttonStyle">برو به سبد خرید</button>
-                      </div>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
           </div>
-          <div class="cardbestseller group/bestseller overflow-hidden">
-                      <p class="text-center">جای خواب پت</p>
-                      <img class="group-hover/bestseller:scale-105 transition duration-200 w-[90%] h-[180px] m-auto" src="./assets/assets/category/pet-bed.jpg" alt="puzzle">
-                      <div class="flex flex-col items-end p-[10px] gap-[5px]">
-                         <p>6,000,000</p>
-                          <div>
-                           <i class="far fa-star text-icon"></i>
-                <i class="fas fa-star-half-alt text-icon"></i>
+          <button class="buttonStyle">برو به سبد خرید</button>
+        </div>
+      </div>
+      <div class="cardbestseller group/bestseller overflow-hidden">
+        <p class="text-center">جای خواب پت</p>
+        <img
+          class="group-hover/bestseller:scale-105 transition duration-200 w-[90%] h-[180px] m-auto"
+          src="./assets/assets/category/pet-bed.jpg"
+          alt="puzzle"
+        />
+        <div class="flex flex-col items-end p-[10px] gap-[5px]">
+          <p>6,000,000</p>
+          <div>
+            <i class="far fa-star text-icon"></i>
+            <i class="fas fa-star-half-alt text-icon"></i>
 
-                <i class="fas fa-star text-icon"></i>
-                <i class="fas fa-star text-icon"></i>
-                <i class="fas fa-star text-icon"></i>
-                          </div>
-                          <button class="buttonStyle">برو به سبد خرید</button>
-                      </div>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
           </div>
-          <div class="cardbestseller group/bestseller overflow-hidden">
-                      <p class="text-center">کیف حمل سگ</p>
-                      <img class="group-hover/bestseller:scale-105 transition duration-200 w-[90%] h-[180px] m-auto" src="./assets/assets/category/pet-back-pack.jpg" alt="puzzle">
-                      <div class="flex flex-col items-end p-[10px] gap-[5px]">
-                         <p>8,000,000</p>
-                          <div>
-                            <i class="far fa-star text-icon"></i>
-                <i class="far fa-star text-icon"></i>
+          <button class="buttonStyle">برو به سبد خرید</button>
+        </div>
+      </div>
+      <div class="cardbestseller group/bestseller overflow-hidden">
+        <p class="text-center">کیف حمل سگ</p>
+        <img
+          class="group-hover/bestseller:scale-105 transition duration-200 w-[90%] h-[180px] m-auto"
+          src="./assets/assets/category/pet-back-pack.jpg"
+          alt="puzzle"
+        />
+        <div class="flex flex-col items-end p-[10px] gap-[5px]">
+          <p>8,000,000</p>
+          <div>
+            <i class="far fa-star text-icon"></i>
+            <i class="far fa-star text-icon"></i>
 
-                <i class="fas fa-star text-icon"></i>
-                <i class="fas fa-star text-icon"></i>
-                <i class="fas fa-star text-icon"></i>
-                          </div>
-                          <button class="buttonStyle">برو به سبد خرید</button>
-                      </div>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
           </div>
-          <div class="cardbestseller group/bestseller overflow-hidden">
-                      <p class="text-center">جای اب سگ و گربه</p>
-                      <img class="group-hover/bestseller:scale-105 transition duration-200 w-[90%] h-[180px] m-auto" src="./assets/assets/category/pet-water-bottle.jpg" alt="puzzle">
-                      <div class="flex flex-col items-end p-[10px] gap-[5px]">
-                         <p>2,600,000</p>
-                          <div>
-                           <i class="far fa-star text-icon"></i>
-                <i class="far fa-star text-icon"></i>
+          <button class="buttonStyle">برو به سبد خرید</button>
+        </div>
+      </div>
+      <div class="cardbestseller group/bestseller overflow-hidden">
+        <p class="text-center">جای اب سگ و گربه</p>
+        <img
+          class="group-hover/bestseller:scale-105 transition duration-200 w-[90%] h-[180px] m-auto"
+          src="./assets/assets/category/pet-water-bottle.jpg"
+          alt="puzzle"
+        />
+        <div class="flex flex-col items-end p-[10px] gap-[5px]">
+          <p>2,600,000</p>
+          <div>
+            <i class="far fa-star text-icon"></i>
+            <i class="far fa-star text-icon"></i>
 
-                <i class="fas fa-star text-icon"></i>
-                <i class="fas fa-star text-icon"></i>
-                <i class="fas fa-star text-icon"></i>
-                          </div>
-                          <button class="buttonStyle">برو به سبد خرید</button>
-                      </div>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
+            <i class="fas fa-star text-icon"></i>
           </div>
-          </section>
-           <section class="w-full h-auto overflow-x-hidden">
-            <section class="w-[90%] sm:w-max h-[auto] sm:h-[350px] sm:flex sm:gap-[10px] sm:justify-around  items-center bg-offer m-[65px_auto] rounded-[10px]">
-              <div class="dogImg bestOffer" >
-               <img class="w-[50%] md:w-[100%] h-[150px]" src="./assets/assets/images/پیشنهاد-شگفت-انگیز-1-scaled.png" alt="dog">
+          <button class="buttonStyle">برو به سبد خرید</button>
+        </div>
+      </div>
+    </section>
+    <section class="w-full h-auto overflow-x-hidden">
+      <section
+        class="w-[90%] sm:w-max h-[auto] sm:h-[350px] sm:flex sm:gap-[10px] sm:justify-around items-center bg-offer m-[65px_auto] rounded-[10px]"
+      >
+        <div class="dogImg bestOffer">
+          <img
+            class="w-[50%] md:w-[100%] h-[150px]"
+            src="./assets/assets/images/پیشنهاد-شگفت-انگیز-1-scaled.png"
+            alt="dog"
+          />
+        </div>
+        <div class="bestOffer">
+          <a href="#">
+            <img
+              src="./assets/assets/products/مرغ-و-اردک-500x500.jpg"
+              alt="reflex"
+            />
+            <p class="description">
+              تشویقی مداد ی گربه جو سرا با طعم مرغ و اردک یک عددی
+            </p>
+            <div class="badgeandprice w-full flex justify-around">
+              <p>55,000</p>
+              <span class="badge">13%</span>
+            </div>
+            <p class="text-center">48,000</p>
+          </a>
+        </div>
+        <div class="bestOffer">
+          <a href="#">
+            <img
+              src="./assets/assets/products/گوش-گاو-و-بره-500x500.jpg"
+              alt="reflex"
+            />
+            <p class="description">
+              تشویقی مدادی گربه جو سرا با طعم گوشت بره و گاو یک عددی
+            </p>
+            <div class="badgeandprice">
+              <p>55,000</p>
+              <span class="badge">13%</span>
+            </div>
+            <p class="text-center">48,000</p>
+          </a>
+        </div>
+        <div class="bestOffer">
+          <a href="#">
+            <img
+              src="./assets/assets/products/سالمون-و-قزل-آلا-500x500.jpg"
+              alt="reflex"
+            />
+            <p class="description">
+              تشویقی مداد گربه جو سرا با طعم ماهی سالمون و قزل آلا یک عددی
+            </p>
+            <div class="badgeandprice">
+              <p>55,000</p>
+              <span class="badge">13%</span>
+            </div>
+            <p class="text-center">48,000</p>
+          </a>
+        </div>
+        <div class="bestOffer">
+          <a href="#">
+            <img
+              src="./assets/assets/products/50b84ab49e51b6d61082da3b3cae09942001b292_1664354316-500x500.jpg.webp"
+              alt="reflex"
+            />
+            <p class="description">تشویقی سگ طرح آب نبات وزن 50گرم -سبز</p>
+            <div class="badgeandprice">
+              <p>400,000</p>
+              <span class="badge">25%</span>
+            </div>
+            <p class="text-center">300,000</p>
+          </a>
+        </div>
+        <div class="bestOffer">
+          <a href="#">
+            <img
+              src="./assets/assets/products/Reflex-Urinary-Chicken-500x500.jpg.webp"
+              alt="reflex"
+            />
+            <p class="description">
+              غذای خشک گربه رفلکس پلاس یورینری با طعم مرغ 1/5 کیلوگرم
+            </p>
+            <div class="badgeandprice">
+              <p>1,850,000</p>
+              <span class="badge">16%</span>
+            </div>
+            <p class="text-center">1,550,000</p>
+          </a>
+        </div>
+        <div class="bestOffer">
+          <a href="#">
+            <img
+              src="./assets/assets/products/sp-canine-science-plan-adult-small-mini-chicken-canned-500x500.png.webp"
+              alt="reflex"
+            />
+            <p class="description">
+              کنسرو سگ بالغ نژاد کوچک هیلز با طمع مرغ وزن 200 گرم
+            </p>
+            <div class="badgeandprice">
+              <p>550,000</p>
+              <span class="badge">36%</span>
+            </div>
+            <p class="text-center">350,000</p>
+          </a>
+        </div>
+        <div class="dogImg bestOffer">
+          <img
+            class="w-[50%] md:w-[100%] h-[150px]"
+            src="./assets/assets/images/پیشنهاد-شگفت-انگیز-1-scaled.png"
+            alt=""
+          />
+        </div>
+      </section>
+    </section>
+    >
+    <section class="w-full h-auto mb-[30px]">
+      <h3 class="text-xl font-bold text-center">
+        <i class="fa-solid fa-paw"></i>دسته بندی های اصلی
+      </h3>
 
-              </div>
-               <div class="bestOffer">
-                <a href="#">
-                  <img  src="./assets/assets/products/مرغ-و-اردک-500x500.jpg" alt="reflex">
-                  <p class="description">تشویقی مداد ی گربه جو سرا با طعم مرغ و اردک یک عددی</p>
-                  <div class="badgeandprice w-full flex justify-around">
-                    <p>55,000</p>
-                    <span class="badge">13%</span>
-                  </div>
-                  <p class="text-center">48,000</p>
-                </a>
-               </div>
-               <div class="bestOffer">
-                <a href="#">
-                  <img  src="./assets/assets/products/گوش-گاو-و-بره-500x500.jpg" alt="reflex">
-                  <p class="description">تشویقی مدادی گربه جو سرا با طعم گوشت بره و گاو یک عددی</p>
-                  <div class="badgeandprice">
-                    <p>55,000</p>
-                    <span class="badge">13%</span>
-                  </div>
-                  <p class="text-center">48,000</p>
-                </a>
-               </div>
-               <div class="bestOffer">
-                <a href="#">
-                  <img  src="./assets/assets/products/سالمون-و-قزل-آلا-500x500.jpg" alt="reflex">
-                  <p class="description">
-                تشویقی مداد گربه جو سرا با طعم ماهی سالمون و قزل آلا یک عددی
-                </p>
-                  <div class="badgeandprice">
-                    <p>55,000</p>
-                    <span class="badge">13%</span>
-                  </div>
-                  <p class="text-center">48,000</p>
-                </a>
-               </div>
-               <div class="bestOffer">
-                <a href="#">
-                  <img  src="./assets/assets/products/50b84ab49e51b6d61082da3b3cae09942001b292_1664354316-500x500.jpg.webp" alt="reflex">
-                  <p class="description">تشویقی سگ طرح آب نبات وزن 50گرم -سبز</p>
-                  <div class="badgeandprice">
-                    <p>400,000</p>
-                    <span class="badge">25%</span>
-                  </div>
-                  <p class="text-center">300,000</p>
-                </a>
-               </div>
-               <div class="bestOffer">
-                <a href="#">
-                  <img  src="./assets/assets/products/Reflex-Urinary-Chicken-500x500.jpg.webp" alt="reflex">
-                  <p class="description">غذای خشک گربه رفلکس پلاس یورینری با طعم مرغ 1/5 کیلوگرم</p>
-                  <div class="badgeandprice">
-                    <p>1,850,000</p>
-                    <span class="badge">16%</span>
-                  </div>
-                  <p class="text-center">1,550,000</p>
-                </a>
-               </div>
-               <div class="bestOffer">
-                <a href="#">
-                  <img src="./assets/assets/products/sp-canine-science-plan-adult-small-mini-chicken-canned-500x500.png.webp" alt="reflex">
-                  <p class="description">کنسرو سگ بالغ نژاد کوچک هیلز با طمع مرغ وزن 200 گرم</p>
-                  <div class="badgeandprice">
-                    <p>550,000</p>
-                    <span class="badge">36%</span>
-                  </div>
-                  <p class="text-center">350,000</p>
-                </a>
-               </div>
-               <div class="dogImg bestOffer" >
-               <img class="w-[50%] md:w-[100%] h-[150px]" src="./assets/assets/images/پیشنهاد-شگفت-انگیز-1-scaled.png" alt="">
+      <div class="w-[99%] h-auto flex flex-wrap justify-around">
+        <a href="#" class="categoryCards group/main">
+          <img
+            class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200"
+            src="./assets/assets/category/dogToy.jfif"
+            alt="dogtoy"
+          />
+          <p>اسباب بازی سگ</p>
+        </a>
+        <a href="#" class="categoryCards group/main">
+          <img
+            class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200"
+            src="./assets/assets/category/tashvighi.jfif"
+            alt="dogtoy"
+          />
+          <p>اسنک و تشویقی سگ</p>
+        </a>
+        <a href="#" class="categoryCards group/main">
+          <img
+            class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200"
+            src="./assets/assets/category/abead.jfif"
+            alt="dogtoy"
+          />
+          <p>سوپ و کنسرو سگ</p>
+        </a>
+        <a href="#" class="categoryCards group/main">
+          <img
+            class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200"
+            src="./assets/assets/category/catdryfood.jfif"
+            alt="dogtoy"
+          />
+          <p>غذای خشک گربه</p>
+        </a>
+        <a href="#" class="categoryCards group/main">
+          <img
+            class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200"
+            src="./assets/assets/category/dogdryfood.jfif"
+            alt="dogtoy"
+          />
+          <p>تشویقی سگ</p>
+        </a>
+        <a href="#" class="categoryCards group/main">
+          <img
+            class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200"
+            src="./assets/assets/category/soap&conserv.jfif"
+            alt="dogtoy"
+          />
+          <p>سوپ و کنسرو گربه</p>
+        </a>
+        <a href="#" class="categoryCards group/main">
+          <img
+            class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200"
+            src="./assets/assets/category/multi-vitamin-cat.jfif"
+            alt="dogtoy"
+          />
+          <p>مولتی ویتامین گربه</p>
+        </a>
+        <a href="#" class="categoryCards group/main">
+          <img
+            class="m-auto w-[80%] lg:w-[100%] rounded-[50%] group-hover/main:scale-105 transition duration-200"
+            src="./assets/assets/category/multi-vitamin-dog.jfif"
+            alt="dogtoy"
+          />
+          <p>مولتی ویتامین سگ</p>
+        </a>
+        <a href="#" class="categoryCards group/main">
+          <img
+            class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200"
+            src="./assets/assets/category/health-dog.jfif"
+            alt="dogtoy"
+          />
+          <p>بهداشت و نظافت سگ</p>
+        </a>
+        <a href="#" class="categoryCards group/main">
+          <img
+            class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200"
+            src="./assets/assets/category/toy-cat.jfif"
+            alt="dogtoy"
+          />
+          <p>اسباب بازی گربه</p>
+        </a>
+        <a href="#" class="categoryCards group/main">
+          <img
+            class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200"
+            src="./assets/assets/category/health-cat.jfif"
+            alt="dogtoy"
+          />
+          <p>بهداشت و نظافت گربه</p>
+        </a>
+        <a href="#" class="categoryCards group/main">
+          <img
+            class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200"
+            src="./assets/assets/category/tashvighi-cat.jfif"
+            alt="dogtoy"
+          />
+          <p>اسنک و تشویقی گربه</p>
+        </a>
+      </div>
+    </section>
 
-              </div>
-            </section>
-           
-           </section> >
-           <section class="w-full h-auto mb-[30px]">
-                            <h3 class="text-xl font-bold text-center"><i class="fa-solid fa-paw"></i>دسته بندی های اصلی</h3>
+    <section
+      class="w-full h-auto flex md:justify-around md:flex-row flex-col items-center gap-[25px] md:gap-[0]"
+    >
+      <a href="#" class="w-[95%] md:w-[48%] h-[100%] block">
+        <img
+          class="w-[100%] md:w-[100%] h-auto shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)]"
+          src="./assets/assets/images/فله.jpg"
+          alt="cat food"
+        />
+      </a>
+      <a href="#" class="w-[95%] md:w-[48%] h-[100%] block">
+        <img
+          class="w-[100%] md:w-[100%] h-auto shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)]"
+          src="./assets/assets/images/فله2.jpg"
+          alt="cat food"
+        />
+      </a>
+    </section>
+    <section
+      class="w-[99%] h-auto mt-[25px] flex flex-wrap justify-around gap-[10px]"
+    >
+      <a
+        href="#"
+        class="lg:w-[40%] md:w-[45%] sm:w-[45%] w-[90%] h-[300px] block"
+      >
+        <img
+          class="rounded-[5px] w-[100%] h-[100%]"
+          src="./assets/assets/middle/middle-img.jpg"
+          alt="middle"
+        />
+      </a>
+      <a
+        href="#"
+        class="lg:w-[15%] md:w-[45%] sm:w-[45%] w-[90%] h-[300px] block"
+      >
+        <img
+          class="rounded-[5px] w-[100%] h-[100%]"
+          src="./assets/assets/middle/middle-small.jfif"
+          alt="middle"
+        />
+      </a>
+      <a href="#" class="lg:w-[20%] md:w-[45%] sm:w-[45%] w-[90%] block">
+        <img
+          class="rounded-[5px] w-[100%] h-[100%]"
+          src="./assets/assets/middle/middle-health.jfif"
+          alt="middle"
+        />
+      </a>
+      <a href="#" class="lg:w-[20%] md:w-[45%] sm:w-[45%] w-[90%] block">
+        <img
+          class="rounded-[5px] w-[100%] h-[100%]"
+          src="./assets/assets/middle/free.jfif"
+          alt="middle"
+        />
+      </a>
+    </section>
+    <section
+      class="w-[99%] m-[0_auto] h-auto md:h-[500px] rounded-[15px] md:border border-[rgb(211,209,209)] mt-[30px]"
+    >
+      <div class="w-[100%] flex justify-between p-[20px]">
+        <h3
+          class="text-[1.17em] font-bold border-b border-b-2 border-b-[rgb(211,209,209)]"
+        >
+          <i class="fa-solid fa-paw"></i>جدیدترین محصولات
+        </h3>
+        <a href="#" class="text-button">مشاهده همه</a>
+      </div>
+      <section class="w-full h-auto flex flex-wrap justify-around">
+        <a
+          href="#"
+          class="w-[45%] lg:w-[16%] md:w-[33%] text-center wrap-anywhere md:border-l border-l-[rgb(211,209,209)]"
+        >
+          <img
+            class="w-[100%]"
+            src="./assets/assets/products/newProducts/12-500x500.png"
+            alt="new"
+          />
+          <p class="text-[12px]">
+            <span class="text-[15px]">*فروش ویژه*</span> غذای خشک سگ بالغ نژاد
+            پروپلن مدل Everyday Nutrition و وزن 3 کیلو گرم
+          </p>
+          <div class="badgeandprice">
+            <p>8,500,000</p>
+            <span class="badge w-[25%]">6%</span>
+          </div>
+          <p class="text-center font-black">8,000,000</p>
+        </a>
+        <a
+          href="#"
+          class="w-[45%] lg:w-[16%] md:w-[33%] text-center wrap-anywhere md:border-l border-l-[rgb(211,209,209)]"
+        >
+          <img
+            class="w-[100%]"
+            src="./assets/assets/products/newProducts/فروش-ویژه-3-500x500.jpg.webp"
+            alt="new"
+          />
+          <p class="text-[12px]">
+            <span class="text-[15px]">*فروش ویژه*</span> غذای خشک سگ پروپلن مدل
+            هایپو آلرژنیک وزن 3 کیلوگرم
+          </p>
+          <div class="badgeandprice">
+            <p>10,000,000</p>
+            <span class="badge w-[25%]">15%</span>
+          </div>
+          <p class="text-center font-black">8,000,000</p>
+        </a>
+        <a
+          href="#"
+          class="w-[45%] lg:w-[16%] md:w-[33%] text-center wrap-anywhere md:border-l border-l-[rgb(211,209,209)]"
+        >
+          <img
+            class="w-[100%]"
+            src="./assets/assets/products/newProducts/مخدوشی-500x500.jpg.webp"
+            alt="new"
+          />
+          <p class="text-[12px]">
+            <span class="text-[15px]">*فروش ویژه*</span>غذای خشک سنگ ونپی با طعم
+            ماهی سالمون وزن 1/5 کیلو گرم
+          </p>
+          <div class="badgeandprice">
+            <p>3,200,000</p>
+            <span class="badge w-[25%]">9%</span>
+          </div>
+          <p class="text-center font-black">2,900,000</p>
+        </a>
+        <a
+          href="#"
+          class="w-[45%] lg:w-[16%] md:w-[33%] text-center wrap-anywhere md:border-l border-l-[rgb(211,209,209)]"
+        >
+          <img
+            class="w-[100%]"
+            src="./assets/assets/products/newProducts/12-500x500.png"
+            alt="new"
+          />
+          <p class="text-[12px]">
+            <span class="text-[15px]">*فروش ویژه*</span> غذای خشک سگ پروپلن مدل
+            هایپو آلرژنیک وزن 3 کیلوگرم
+          </p>
+          <div class="badgeandprice">
+            <p>8,500,000</p>
+            <span class="badge w-[25%]">6%</span>
+          </div>
+          <p class="text-center font-black">8,000,000</p>
+        </a>
+        <a
+          href="#"
+          class="w-[45%] lg:w-[16%] md:w-[33%] text-center wrap-anywhere md:border-l border-l-[rgb(211,209,209)]"
+        >
+          <img
+            class="w-[100%]"
+            src="./assets/assets/products/newProducts/فروش-ویژه-8-500x500.jpg.webp"
+            alt="new"
+          />
+          <p class="text-[12px]">
+            <span class="text-[15px]">*فروش ویژه*</span> غذای خشک سگ رویال کنین
+            مدل گسترواینتستینال |gastrointestinal وزن 7 کیلو گرم
+          </p>
+          <div class="badgeandprice">
+            <p>29,000,000</p>
+            <span class="badge w-[25%]">7%</span>
+          </div>
+          <p class="text-center font-black">27,000,000</p>
+        </a>
+        <a
+          href="#"
+          class="w-[45%] lg:w-[16%] md:w-[33%] text-center wrap-anywhere md:border-l border-l-[rgb(211,209,209)]"
+        >
+          <img
+            class="w-[100%]"
+            src="./assets/assets/products/newProducts/ChatGPT-Image-Aug-24-2026-05_58_39-PM-500x500.png.webp"
+            alt="new"
+          />
+          <p class="text-[12px]">
+            <span class="text-[15px]">*فروش ویژه*</span> غذای خشک سگ رویال کنین
+            مدل گسترواینتستینال |gastrointestinal وزن 7 کیلو گرم
+          </p>
 
-              <div class="w-[99%] h-auto flex flex-wrap justify-around">
-                  <a href="#" class="categoryCards group/main">
-                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/dogToy.jfif" alt="dogtoy">
-                    <p>اسباب بازی سگ</p>
-                  </a>
-                   <a href="#" class="categoryCards group/main">
-                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/tashvighi.jfif" alt="dogtoy">
-                    <p>اسنک و تشویقی سگ</p>
-                  </a>
-                  <a href="#" class="categoryCards group/main">
-                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/abead.jfif" alt="dogtoy">
-                    <p>سوپ و  کنسرو سگ</p>
-                  </a>
-                  <a href="#" class="categoryCards group/main">
-                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/catdryfood.jfif" alt="dogtoy">
-                    <p>غذای خشک گربه</p>
-                  </a>
-                  <a href="#" class="categoryCards group/main">
-                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/dogdryfood.jfif" alt="dogtoy">
-                    <p>تشویقی سگ</p>
-                  </a>
-                  <a href="#" class="categoryCards group/main">
-                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/soap&conserv.jfif" alt="dogtoy">
-                    <p>سوپ و  کنسرو گربه</p>
-                  </a>
-                  <a href="#" class="categoryCards group/main">
-                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/multi-vitamin-cat.jfif" alt="dogtoy">
-                    <p>مولتی ویتامین گربه</p>
-                  </a>
-                  <a href="#" class="categoryCards group/main">
-                    <img class="m-auto w-[80%] lg:w-[100%] rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/multi-vitamin-dog.jfif" alt="dogtoy">
-                    <p>مولتی ویتامین سگ</p>
-                  </a>
-                  <a href="#" class="categoryCards group/main">
-                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/health-dog.jfif" alt="dogtoy">
-                    <p>بهداشت و  نظافت سگ</p>
-                  </a>
-                  <a href="#" class="categoryCards group/main">
-                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/toy-cat.jfif" alt="dogtoy">
-                    <p>اسباب بازی گربه</p>
-                  </a>
-                  <a href="#" class="categoryCards group/main">
-                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/health-cat.jfif" alt="dogtoy">
-                    <p>بهداشت و  نظافت گربه</p>
-                  </a>
-                  <a href="#" class="categoryCards group/main">
-                    <img class="m-auto w-[80%] lg:w-[100%] fit-cover rounded-[50%] group-hover/main:scale-105 transition duration-200" src="./assets/assets/category/tashvighi-cat.jfif" alt="dogtoy">
-                    <p>اسنک و  تشویقی گربه</p>
-                  </a>
-              </div>
-           </section>
-          
-             <section class="w-full h-auto   flex md:justify-around md:flex-row flex-col  items-center  gap-[25px] md:gap-[0]">
-                <a  href="#" class="w-[95%] md:w-[48%] h-[100%] block">
-                   <img class="w-[100%] md:w-[100%] h-auto shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)]" src="./assets/assets/images/فله.jpg" alt="cat food">
-                </a>
-                <a href="#"  class="w-[95%] md:w-[48%] h-[100%] block">
-                  <img class="w-[100%] md:w-[100%]  h-auto shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)]" src="./assets/assets/images/فله2.jpg" alt="cat food">
-                </a>
-             </section>
-             <section class="w-[99%] h-auto mt-[25px] flex flex-wrap justify-around gap-[10px]">
-              <a href="#" class="lg:w-[40%] md:w-[45%]  sm:w-[45%] w-[90%] h-[300px] block ">
-                <img class="rounded-[5px] w-[100%] h-[100%]" src="./assets/assets/middle/middle-img.jpg" alt="middle">
-              </a>
-              <a href="#" class="lg:w-[15%] md:w-[45%]  sm:w-[45%] w-[90%] h-[300px] block ">
-                <img class="rounded-[5px] w-[100%] h-[100%]" src="./assets/assets/middle/middle-small.jfif" alt="middle">
-              </a>
-               <a href="#" class="lg:w-[20%] md:w-[45%]  sm:w-[45%] w-[90%]  block ">
-                <img class="rounded-[5px] w-[100%] h-[100%]" src="./assets/assets/middle/middle-health.jfif" alt="middle">
-              </a>
-                <a href="#" class="lg:w-[20%] md:w-[45%]  sm:w-[45%] w-[90%]  block ">
-                <img class="rounded-[5px] w-[100%] h-[100%]" src="./assets/assets/middle/free.jfif" alt="middle">
-              </a>
-             </section> 
-             <section class="w-[99%] m-[0_auto] h-auto md:h-[500px] rounded-[15px] md:border border-[rgb(211,209,209)] mt-[30px]">
-                <div class="w-[100%] flex justify-between p-[20px]">
-                  <h3 class="text-[1.17em] font-bold border-b border-b-2 border-b-[rgb(211,209,209)]"><i class="fa-solid fa-paw"></i>جدیدترین محصولات</h3>
-                  <a href="#" class="text-button">مشاهده همه</a>
-                </div>
-                <section class="w-full h-auto flex flex-wrap justify-around">
-                   <a href="#" class="w-[45%] lg:w-[16%] md:w-[33%] text-center wrap-anywhere md:border-l border-l-[rgb(211,209,209)]">
-                    <img class="w-[100%]" src="./assets/assets/products/newProducts/12-500x500.png" alt="new">
-                    <p class="text-[12px]"><span class="text-[15px]">*فروش ویژه*</span> غذای خشک سگ بالغ نژاد پروپلن مدل Everyday Nutrition و وزن 3 کیلو گرم</p>
-                     <div class="badgeandprice">
-                    <p>8,500,000</p>
-                    <span class="badge w-[25%]">6%</span>
-                  </div>
-                  <p class="text-center font-black">8,000,000</p>
-                   </a>
-                    <a href="#" class="w-[45%] lg:w-[16%] md:w-[33%] text-center wrap-anywhere md:border-l border-l-[rgb(211,209,209)]">
-                    <img class="w-[100%]" src="./assets/assets/products/newProducts/فروش-ویژه-3-500x500.jpg.webp" alt="new">
-                    <p class="text-[12px]"><span class="text-[15px]">*فروش ویژه*</span> غذای خشک سگ پروپلن مدل هایپو آلرژنیک
- وزن 3 کیلوگرم</p>
-                     <div class="badgeandprice">
-                    <p>10,000,000</p>
-                    <span class="badge w-[25%]">15%</span>
-                  </div>
-                  <p class="text-center font-black">8,000,000</p>
-                   </a>
-                   <a href="#" class="w-[45%] lg:w-[16%] md:w-[33%] text-center wrap-anywhere md:border-l border-l-[rgb(211,209,209)]">
-                    <img class="w-[100%]" src="./assets/assets/products/newProducts/مخدوشی-500x500.jpg.webp" alt="new">
-                    <p class="text-[12px]"><span class="text-[15px]">*فروش ویژه*</span>غذای خشک سنگ ونپی با طعم ماهی سالمون وزن
-                1/5 کیلو گرم
-              </p>
-                     <div class="badgeandprice">
-                    <p>3,200,000</p>
-                    <span class="badge w-[25%]">9%</span>
-                  </div>
-                  <p class="text-center font-black">2,900,000</p>
-                   </a>
-                    <a href="#" class="w-[45%] lg:w-[16%] md:w-[33%] text-center wrap-anywhere md:border-l border-l-[rgb(211,209,209)]">
-                    <img class="w-[100%]" src="./assets/assets/products/newProducts/12-500x500.png" alt="new">
-                    <p class="text-[12px]"><span class="text-[15px]">*فروش ویژه*</span> غذای خشک سگ پروپلن مدل هایپو آلرژنیک
- وزن 3 کیلوگرم</p>
-                     <div class="badgeandprice">
-                    <p>8,500,000</p>
-                    <span class="badge w-[25%]">6%</span>
-                  </div>
-                  <p class="text-center font-black">8,000,000</p>
-                   </a>
-                    <a href="#" class="w-[45%] lg:w-[16%] md:w-[33%] text-center wrap-anywhere md:border-l border-l-[rgb(211,209,209)]">
-                    <img class="w-[100%]" src="./assets/assets/products/newProducts/فروش-ویژه-8-500x500.jpg.webp" alt="new">
-                    <p class="text-[12px]"><span class="text-[15px]">*فروش ویژه*</span>  غذای خشک سگ رویال کنین مدل
-                گسترواینتستینال |gastrointestinal وزن 7 کیلو گرم
-              </p>
-                     <div class="badgeandprice">
-                    <p>29,000,000</p>
-                    <span class="badge w-[25%]">7%</span>
-                  </div>
-                  <p class="text-center font-black">27,000,000</p>
-                   </a>
-                   <a href="#" class="w-[45%] lg:w-[16%] md:w-[33%] text-center wrap-anywhere md:border-l border-l-[rgb(211,209,209)]">
-                    <img class="w-[100%]" src="./assets/assets/products/newProducts/ChatGPT-Image-Aug-24-2026-05_58_39-PM-500x500.png.webp" alt="new">
-                    <p class="text-[12px]"><span class="text-[15px]">*فروش ویژه*</span>  غذای خشک سگ رویال کنین مدل
-                گسترواینتستینال |gastrointestinal وزن 7 کیلو گرم
-              </p>
-                     
-                  <p class="text-center font-black">230,000</p>
-                   </a>
-                </section>
-             </section>
-             <section class="w-full h-[100%] mt-[10px]  ">
-              <div class="w-[99%] h-[300px] m-auto   rounded-[15px] border border-[rgb(211,209,209)]">
-                              <h3 class="text-[1.17em] font-bold p-[20px]"><i class="fa-solid fa-paw"></i>برند ها</h3>
+          <p class="text-center font-black">230,000</p>
+        </a>
+      </section>
+    </section>
+    <section class="w-[99%] h-auto m-[10px_auto]">
+      <div
+        class="w-[100%] h-auto sm:h-[300px] m-auto rounded-[15px] sm:border border-[rgb(211,209,209)]"
+      >
+        <h3 class="text-[1.17em] font-bold p-[20px]">
+          <i class="fa-solid fa-paw"></i>برند ها
+        </h3>
 
-                <div class="w-full h-[100%] flex justify-around ">
-                   <img class="lg:w-[10%] lg:h-[40%]" src="./assets/assets/brands/royal canin.jfif" alt="brands">
-                 <img class="lg:w-[10%] lg:h-[40%]" src="./assets/assets/brands/images.png" alt="brands">
-                 <img class="lg:w-[10%] lg:h-[40%]" src="./assets/assets/brands/Hill`s.jfif" alt="brands">
-                 <img class="lg:w-[10%] lg:h-[40%]" src="./assets/assets/brands/purina.jfif" alt="brands">
-                 <img class="lg:w-[10%] lg:h-[40%]" src="./assets/assets/brands/reflex.png" alt="brands">
-                </div>
-
-              </div>
-                </section>
+        <div
+          class="w-full h-full flex flex-col items-center sm:flex-row justify-around gap-[50px]"
+        >
+          <img
+            class="w-[30%] h-[40%] sm:w-[10%] sm:h-[40%]"
+            src="./assets/assets/brands/royal canin.jfif"
+            alt="brands"
+          />
+          <img
+            class="w-[30%] h-[40%] sm:w-[10%] sm:h-[40%]"
+            src="./assets/assets/brands/images.png"
+            alt="brands"
+          />
+          <img
+            class="w-[30%] h-[40%] sm:w-[10%] sm:h-[40%]"
+            src="./assets/assets/brands/Hill`s.jfif"
+            alt="brands"
+          />
+          <img
+            class="w-[30%] h-[40%] sm:w-[10%] sm:h-[40%]"
+            src="./assets/assets/brands/purina.jfif"
+            alt="brands"
+          />
+          <img
+            class="w-[30%] h-[40%] sm:w-[10%] sm:h-[40%]"
+            src="./assets/assets/brands/reflex.png"
+            alt="brands"
+          />
+        </div>
+      </div>
+    </section>
+    <footer class="w-[90%] sm:w-[99%] h-auto border rounded-[15px] border-[rgb(211,209,209)] bg-footer m-[0_auto]">
+      <div class="max-w-[85%] text-center flex flex-col sm:flex-row sm:items-center gap-[10px] m-[0_auto] sm:text-start ">
+        <h3 class="text-lg font-bold w-full sm:w-[30%] text-brand">درباره پت یار</h3>
+        <p class="text-base font-normal leading-normal">
+          پت یار یک فروشگاه آنلاین و حضوری وسایل حیوانات خانگی است ! در این
+          فروشگاه میتوانید ملزومات همدم خانگی خود را تهیه کنید
+        </p>
+        <input class="border bg-white w-full md:w-[50%]" type="text" placeholder="ایمیل خودتون رو وارد کنید ">
+        <button class="w-[25%] sm:w-[12%] border mx-[5px] bg-white mx-auto">کلیک کنید</button>
+      </div>
+      <hr class="my-[10px] border-border">
+       <div class="max-w-[85%]  flex flex-col sm:flex-row sm:justify-around  m-[0_auto]">
+        <div class="sm:w-[15%]  w-full flex flex-col items-center sm:items-start gap-[15px]">
+        <h1 class="font-bold text-3xl text-brand">پت یار</h1>
+        <hr class="w-[50%] text-border sm:block hidden">
+        <p class="text-[16px] font-normal">پت خوشحال با پت یار</p>
+        <ul class="flex">
+          <li><a href="#"><i class="fa-brands fa-whatsapp text-[25px] text-[#25D366]"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-telegram text-[25px] text-[#229ED9]"></i></a></li>
+        </ul>
+        </div>
+        <div class="sm:w-[10%] w-full  flex flex-col items-center sm:items-start ">
+          <h3 class="text-lg font-bold">درباره ما</h3>
+          <ul class="sm:text-start text-center my-[10px]">
+            <li><a href="#">مقالات</a></li>
+            <li class="text-[15px]">تهران , ستارخان , برج های ستارخان , واحد 44</li>
+          </ul>
+        </div>
+        <div class="sm:w-[10%] w-full flex text-center sm:text-start flex-col items-center sm:items-start gap-[10px]">
+          <h3 class="text-lg font-bold">منو</h3>
+          <ul>
+            <li><a href="#">درباره ما</a></li>
+            <li><a href="#">بلاگ</a></li>
+            <li><a href="#">خدمات</a></li>
+          </ul>
+        </div>
+        <div class="sm:w-[10%] w-full flex text-center flex-col items-center sm:items-start">
+          <h3 class="text-lg font-bold">خدمات</h3>
+        </div>
+        <div class="sm:w-[10%] w-full text-center">
+          <h3 class="text-lg font-bold">ارتباط با ما</h3>
+        </div>
+        <div class="sm:w-[25%] h-[200px] w-full flex flex-col">
+          <iframe class="w-full h-[180px]" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6478.363336050062!2d51.35215246660483!3d35.72175041720566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1788085348583!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+       </div>
+        
+    </footer>
     <div class="overlay"></div>
-    
   </body>
 </html>
