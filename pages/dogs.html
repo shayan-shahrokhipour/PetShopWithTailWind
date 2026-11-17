@@ -42,30 +42,7 @@
         .megaMenu {
           @apply hidden z-[200] w-full h-auto bg-white absolute right-0 top-[26px] justify-around  rounded-[0_0_5px_5px];
         }
-
         
-
-        
-        .buttonStyle {
-          @apply w-[90%] h-[24px] text-[14px] m-auto text-[#fff] bg-button rounded-[5px] shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)] 
-          cursor-pointer transition duration-200 hover:bg-[#2088bd];
-        }
-
-        
-        .badgeandprice {
-          @apply w-full flex justify-around m-[0_auto];
-        }
-
-        .badgeandprice p {
-          @apply line-through;
-        }
-        .bestOffer img {
-          @apply w-[50%] h-[150px]  m-auto;
-        }
-
-        .badge {
-          @apply w-[25%]  text-center  rounded-[25px] bg-[red] text-white;
-        }
         .shadowcart{
           @apply shadow-[0_4px_12px_rgba(0,0,0,0.12),inset_0_0_8px_rgba(0,0,0,0.08)]
          }
@@ -80,6 +57,8 @@
           right-0
            translate-x-[100%]
           opacity-0
+        }.cartHover{
+          @apply flex flex-col justify-around items-center text-black  rounded-[5px] border 
         }
         
         
@@ -135,7 +114,7 @@
             class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
             src="../assets/assets/paw-min.webp"
             alt="paw"
-          /><a href="#" class="linkAnchor">گربه</a>
+          /><a href="../pages/cats.html" class="linkAnchor">گربه</a>
           <div class="group-hover/cat:md:flex megaMenu">
             <div>
               <h1 class="text-black">غذای گربه</h1>
@@ -417,110 +396,266 @@
                  <span class="text-black">10,000,000</span>
             </section>
          </aside>
-         <section class=" sm:w-[75%] w-[90%] my-[10px] h-auto flex justify-around flex-wrap gap-[5px] ">
+         <section class=" sm:w-[75%] w-[90%]  h-auto flex justify-around flex-wrap gap-[5px] ">
             <a href="#" class=" shadowcart cardProduct beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/Blueberry-2-768x768.jpg" alt="wanpy">
-              <p class="text-[14px] text-black px-[5px]">آب نبات سگ ونپی با طعم مرغ و شیر بز و بلوبری وزن 6 گرم</p>
-              <span class="text-black px-[5px]">250,000</span>
-              <div class="w-[20%] h-[150px] bg-[#fff] cardProduct afterrelative 
+              <p class="text-[14px] text-black px-[5px]">اسباب بازی گربه مدل چرخان</p>
+              <span class="text-black px-[5px]">380,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
               transition-all duration-300
             group-hover/appear:translate-x-0
-            group-hover/appear:opacity-100"></div>
+            group-hover/appear:opacity-100">
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="shadowcart cardProduct">
+             <a href="#" class="shadowcart cardProduct beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/pumpkin-2-768x768.jpg" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">آب نبات سگ ونپی با طعم مرغ و شیر بز و بلوبری وزن 6 گرم</p>
               <span class="text-black px-[5px]">250,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff] cardProduct cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+           <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="shadowcart cardProduct">
+             <a href="#" class="shadowcart cardProduct beforerelative group/appear">
              <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/آویز-قلاده-سگ-ال-ای-دی-دار-768x768.jpg" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">آویز قلاده LED سه حالته</p>
-              <span class="text-black px-[5px]">200,000</span>             
+              <span class="text-black px-[5px]">200,000</span> 
+              <div class="w-[20%] h-[150px] bg-[#fff] cardProduct cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>            
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/61svUYrzs0L._AC_SL1500_-500x500.jpg.webp" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسباب بازی چرخ وفلک سگ و گربه به همراه مخزن تشویقی</p>
               <span class="text-black px-[5px]">620,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff] cardProduct cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/اسباب-بازی-پدالی-2اردک-768x768.png.webp" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسباب بازی پدالی مدل اردک</p>
               <span class="text-black px-[5px]">1,400,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff] cardProduct cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+             <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/46726e1d002dc5acc7558bd81e5c1066cf46f2f7_1701770960-768x768.jpg" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسباب بازی تعادلی سگ مدل سفینه</p>
               <span class="text-black px-[5px]">650,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+             <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/barbed-ball-for-dog-768x768.jpg.webp" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسباب بازی سگ مدل توپ چراغ دار</p>
               <span class="text-black px-[5px]">120,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/image3-768x768.jpeg" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسباب بازی فکری سگ مدل پازل</p>
               <span class="text-black px-[5px]">1,400,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+           <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/اسباب-بازی-سگ-و-گربه-مدل-توپ-زنگوله_-دار-پک-۴-عددی-768x768.png.webp" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسباب بازی سگ و گربه مدل توپ زنگوله‌ دار پک ۴ عددی</p>
               <span class="text-black px-[5px]">290,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+          <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/توپ-راگبی-768x768.jpg" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسباب بازی سگ مدل توپ راگبی</p>
               <span class="text-black px-[5px]">520,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/5414365356484_pck_webl-768x768.jpg.webp" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسباب بازی دوو پلاس مدل Tug And Chew Toy</p>
               <span class="text-black px-[5px]">250,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+              <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/61x3keUVD6L._AC_SL1200_-500x500.jpg.webp" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسباب بازی سگ و گربه مدل توپ متحرک دنباله دار</p>
               <span class="text-black px-[5px]">850,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+          <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/پنجه-2-768x768.jpeg" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسباب بازی فکری سگ مدل پازل طرح پنجه</p>
               <span class="text-black px-[5px]">1,400,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+             <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/توپ-و-طناب-5-768x768.jpg.webp" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسباب بازی کنفی سگ نیناپت مدل توپ و طناب</p>
               <span class="text-black px-[5px]">720,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+             <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs//Boom-Boom-Ball-768x768.png" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسباب‌بازی توپ سگ مدل Boom Boom Ball طرح رنگی</p>
               <span class="text-black px-[5px]">250,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+               <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs//hot_new-768x768.jpg.webp" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسپری ضد التهاب زخم سگ و گربه وت اکسپرت Hot Spot Spray حجم 100 میلی لیتر</p>
               <span class="text-black px-[5px]">2,500,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+              <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/chlorhexidine-768x768.jpg.webp" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسپری ضد التهاب زخم سگ و گربه وت اکسپرت Hot Spot Spray حجم 100 میلی لیتر</p>
               <span class="text-black px-[5px]">2,600,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+          <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/توت-فرنگی-768x768.png.webp" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسپری ضد عفونی کننده نانو رد اسپرینگ با رایحه توت فرنگی 500 میلی لیتر</p>
               <span class="text-black px-[5px]">645,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff] cartHover  afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+             <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/توت-فرنگی-500x500.png.webp" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسپری ضد عفونی کننده نانو رد اسپرینگ با رایحه قهوه 500 میلی لیتر</p>
               <span class="text-black px-[5px]">645,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  cartHover afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100">
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
-             <a href="#" class="cardProduct shadowcart">
+             <a href="#" class="cardProduct shadowcart beforerelative group/appear">
               <img class="w-[65%] m-auto" src="../assets/assets/products/productPages/dogs/lavender-red-spring-surrounding-spray-768x768.jpg.webp" alt="wanpy">
               <p class="text-[14px] text-black px-[5px]">اسپری ضد عفونی کننده نانو رد اسپرینگ مدل کلاسیک 500 میلی لیتر</p>
               <span class="text-black px-[5px]">630,000</span>
+              <div class="w-[20%] h-[150px] bg-[#fff]  afterrelative 
+              transition-all duration-300
+            group-hover/appear:translate-x-0
+            group-hover/appear:opacity-100 cartHover">
+                <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
             </a>
          </section>
         </section>
