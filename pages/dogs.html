@@ -66,7 +66,7 @@
     </style>
     <title>سگ</title>
 </head>
-<body class="flex h-[100vh] flex-col max-w-[1440px] m-[0_auto] font-display group">
+<body class="flex min-h-[100vh] flex-col max-w-[1440px] m-[0_auto] font-display group">
     <header
       class="z-[300] w-[100%] h-[200px] md:h-auto flex justify-around items-start md:items-center flex-wrap"
     >
@@ -103,7 +103,7 @@
       </div>
     </header>
 
-    <nav
+   <nav
       class="z-[300] w-[100%] max-md:overflow-x-auto scrollbar-none relative"
     >
       <ul
@@ -114,7 +114,7 @@
             class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
             src="../assets/assets/paw-min.webp"
             alt="paw"
-          /><a href="../pages/cats.html" class="linkAnchor">گربه</a>
+          /><a href="./pages/cats.html" class="linkAnchor">گربه</a>
           <div class="group-hover/cat:md:flex megaMenu">
             <div>
               <h1 class="text-black">غذای گربه</h1>
@@ -204,7 +204,7 @@
             class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
             src="../assets/assets/dog-min.webp"
             alt="dog"
-          /><a href="#" class="linkAnchor">سگ</a>
+          /><a href="./pages/dogs.html" class="linkAnchor">سگ</a>
           <div class="group-hover/dog:md:flex megaMenu">
             <div>
               <h1 class="text-black">غذای سگ</h1>
@@ -294,7 +294,7 @@
             class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
             src="../assets/assets/rabbit-min.webp"
             alt="rabbit"
-          /><a href="#" class="linkAnchor">جوندگان</a>
+          /><a href="../pages/rodents.html" class="linkAnchor">جوندگان</a>
           <div class="megaMenu group-hover/rodents:md:flex">
             <h1 class="text-black">جوندگان</h1>
           </div>
@@ -304,7 +304,7 @@
             class="w-[65%] h-[25px] md:w-[32%] md:h-[20px]"
             src="../assets/assets/parrot-min.webp"
             alt="parrot"
-          /><a href="#" class="linkAnchor">پرندگان</a>
+          /><a href="./pages/birds.html" class="linkAnchor">پرندگان</a>
           <div class="group-hover/bird:md:flex megaMenu">
             <h1 class="text-black">پرندگان</h1>
           </div>
@@ -376,7 +376,7 @@
         <span>/</span>
         <span>سگ</span>
        </section>
-        <section class="w-full h-auto flex justify-around">
+        <section class="w-full h-auto flex justify-around mb-[10px]">
             <aside class="w-[20%] sm:block hidden h-auto">
             <section class="w-full h-auto text-center border text-border rounded-[5px]  shadowcart">
                 <p class="text-black text-[15px] hover:text-[#7dd3fc] transition duration-200 cursor-pointer">مرتب سازی پیش فرض</p>
@@ -697,11 +697,20 @@
             <li><a href="#">خدمات</a></li>
           </ul>
         </div>
-        <div class="sm:w-[10%] w-full flex text-center flex-col items-center sm:items-start">
+        <div class="sm:w-[10%] w-full flex  flex-col text-center sm:text-start items-center sm:items-start gap-[10px]">
           <h3 class="text-lg font-bold">خدمات</h3>
+          <ul>
+            <li><a href="#">غذا خشک سگ</a></li>
+            <li><a href="#">غذا خشک گربه</a></li>
+            <li><a href="#">واکسن</a></li>
+          </ul>
         </div>
-        <div class="sm:w-[10%] w-full text-center">
+        <div class="sm:w-[10%] w-full flex flex-col items-center sm:items-start text-center sm:text-start gap-[10px]">
           <h3 class="text-lg font-bold">ارتباط با ما</h3>
+           <ul>
+            <li><a href="#">ساعات کاری : 9صبح تا 12 ظهر</a></li>
+            <li><a href="#">+12345678900</a></li>
+          </ul>
         </div>
         <div class="sm:w-[25%] h-[200px] w-full flex flex-col">
           <iframe class="w-full h-[180px]" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6478.363336050062!2d51.35215246660483!3d35.72175041720566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1788085348583!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
